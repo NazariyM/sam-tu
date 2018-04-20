@@ -1,0 +1,84 @@
+// basic styles
+body
+  min-width: 320px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  +f('pm-300', 16, 22)
+  color: #20201f
+  &.is-locked
+    overflow: hidden
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    
+.container
+  position: relative
+  max-width: 1140px
+  padding: 0 15px
+  margin: 0 auto
+  
+.link-decor
+  border-bottom: 1px solid currentColor
+  +trs
+  .no-touch &:hover
+    border-bottom-color: transparent
+    
+.title-md
+  +f('cal-400', 42, 48)
+  letter-spacing: 0.06em
+  text-align: center
+  text-transform: uppercase
+  +xs
+    font-size: 28px
+    line-height: 30px
+  
+.title-sm
+  +f('cal-700', 35, 39)
+  letter-spacing: 0.06em
+  +xs
+    font-size: 28px
+    line-height: 30px
+
+.btn
+  position: relative
+  display: inline-block
+  text-transform: uppercase
+  text-align: center
+  outline: 0
+  cursor: pointer
+  
+  input
+    display: none
+    
+.slider
+  display: none
+  &.slick-initialized
+    display: block
+    
+  &__btn
+    position: absolute
+    top: 50%
+    z-index: 1
+    margin-top: -20px
+    outline: 0
+    border: 0
+    padding: 0
+    .no-touch &:hover svg
+      fill: $color1
+    &.slick-disabled
+      svg
+        fill: #c5c5c5
+      .no-touch &:hover svg
+        fill: #c5c5c5
+      
+    svg
+      width: 21px
+      height: 40px
+      fill: #000
+      +trs
+    &_prev
+      left: 0
+    &_next
+      right: 0

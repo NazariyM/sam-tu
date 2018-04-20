@@ -1,0 +1,26 @@
+.header
+   &__container
+      display: flex
+      
+   &__top
+      padding: 21px 0
+      background-color: #f1f5f9
+      &-container
+         display: flex
+         align-items: center
+         justify-content: space-between
+      ul
+         display: flex
+         li
+            line-height: 1
+            &:not(:last-child)
+               margin-right: 15px
+            a
+               +f('pm-400', 15)
+               color: #606162
+               
+   &__logo
+      display: block
+      width: 174px
+      height: 98px
+      +cover-img
