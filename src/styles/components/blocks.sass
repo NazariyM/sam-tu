@@ -1,1 +1,107 @@
+.address-block
+   p
+      +f('pm-400', 16, 25)
+      strong
+         +f('pm-600')
+         
+   &__btn
+      padding: 9px 25px 7px
+      min-width: 0
+      +f('pml-400', 16)
+      color: #fff
+      text-transform: none
+      background: #dc3531
+      svg
+         vertical-align: -2px
+         margin-left: 5px
+         transition: .3s ease
+         
+      .no-touch &:hover svg
+         transform: scaleY(-1)
+      .no-touch &:hover
+         background: darken(#dc3531, 8)
+
 .tel-block
+   display: flex
+   flex-direction: column
+   p
+      margin-bottom: 5px
+      color: #88898a
+      +f('pm-400')
+      
+   a
+      +f('pm-600', 25, 25)
+      &:not(:last-child)
+         margin-bottom: 5px
+      span
+         font-size: 20px
+         
+.change-city
+   padding: 10px
+   cursor: default
+   &__title
+      margin-bottom: 15px
+      +f('pm-600', 28)
+      text-align: center
+   &__list
+      display: flex
+   &__item
+      flex: 0 1 33.333333%
+      margin: 0 15px
+      text-align: center
+      &-img
+         margin-bottom: 10px
+      &-title
+         +f('pm-400', 20)
+         +trs
+         
+      .no-touch &:hover .change-city__item-title
+         color: #dc3531
+
+.search-field
+   position: relative
+   flex: 0 0 170px
+   width: 170px
+   input
+      width: 100%
+      height: 36px
+      padding: 0 40px 0 20px
+      border-radius: 18px
+      background-color: #fff
+      outline: 0
+      border: 0
+      +f('pm-400', 14)
+      +placeholder-color(#88898a)
+      
+   label
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      cursor: pointer
+      
+   input[type='submit']
+      display: none
+      
+.popup
+   display: none
+   
+.form-input
+   width: 100%
+   height: 50px
+   padding: 0 25px
+   border-radius: 25px!important
+   border: 2px solid #d7d7d7
+   background-color: #fff
+   +f('pm-300', 15)
+   +trs
+   +placeholder-color(#88898a)
+   &:focus
+      border-color: $color2
+   
+.form-submit
+   border-radius: 25px!important

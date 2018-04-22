@@ -20,37 +20,54 @@ body
   margin: 0 auto
   
 .link-decor
-  border-bottom: 1px solid currentColor
-  +trs
-  .no-touch &:hover
-    border-bottom-color: transparent
+  span
+    color: #dc3531
+    border-bottom: 1px solid rgba(#dc3531, .5)
+    +trs
+  .no-touch &:hover span
+    border-bottom-color: #dc3531
     
 .title-md
-  +f('cal-400', 42, 48)
-  letter-spacing: 0.06em
+  +f('pm-600', 40, 40)
   text-align: center
-  text-transform: uppercase
+  text-transform: none
   +xs
     font-size: 28px
     line-height: 30px
   
-.title-sm
-  +f('cal-700', 35, 39)
-  letter-spacing: 0.06em
-  +xs
-    font-size: 28px
-    line-height: 30px
-
 .btn
-  position: relative
   display: inline-block
-  text-transform: uppercase
+  padding: 7px 15px 5px
+  min-width: 170px
   text-align: center
   outline: 0
   cursor: pointer
-  
-  input
-    display: none
+  +f('pm-400', 13, 25)
+  color: #1f1f1e
+  background: #fff
+  text-transform: uppercase
+  border-radius: 20px
+  transition: .4s ease
+  border: 0
+  &_red-line
+    border: 2px solid #dc3531
+    .no-touch &:hover
+      background: #dc3531
+      color: #fff
+  &_grey-line
+    border: 2px solid #88898a
+    .no-touch &:hover
+      background: #88898a
+      color: #fff
+      
+  &_red
+    padding: 14px 15px 12px
+    +f('pm-700', 13)
+    color: #fff
+    border-radius: 25px
+    background-color: #dc3531
+    .no-touch &:hover
+      background: darken(#dc3531, 10)
     
 .slider
   display: none
@@ -66,12 +83,7 @@ body
     border: 0
     padding: 0
     .no-touch &:hover svg
-      fill: $color1
-    &.slick-disabled
-      svg
-        fill: #c5c5c5
-      .no-touch &:hover svg
-        fill: #c5c5c5
+      fill: #dc3531
       
     svg
       width: 21px
@@ -79,6 +91,7 @@ body
       fill: #000
       +trs
     &_prev
-      left: 0
+      left: -35px
     &_next
-      right: 0
+      right: -35px
+      

@@ -2,21 +2,20 @@
 +b.HEADER.header.no-transition(class= headerClass ? headerClass : '')
 	+e.top
 		+e.top-container.container
-			+e.NAV.nav
-				-
-					navList = [
-					'О компании',
-					'Акции',
-					'Отзывы',
-					'Видео',
-					'Новости',
-					'Полезное',
-					'Контакты'
-					]
+			-
+				menuList = [
+				'О компании',
+				'Акции',
+				'Отзывы',
+				'Видео',
+				'Новости',
+				'Полезное',
+				'Контакты'
+				]
 
-				ul
-					for navText in navList
-						li: a(href='#!')= navText
+			ul
+				for menuText in menuList
+					li: a(href='#!')= menuText
 
 			+e.top-right
 				ul
@@ -26,41 +25,125 @@
 
 	+e.mid
 		+e.container.container
-			+e.mid-col
-				+e.A.logo(href='#!')
-					+e.IMG(src='static/img/other/logo.png' alt='Технология управления')
-			+e.mid-col
-				+e.mid-dropdown.dropdown
+			+e.row
+				+e.mid-col
+					+e.A.logo(href='#!')
+						+e.IMG(src='static/img/other/logo.png' alt='Технология управления')
+				+e.mid-col.address-block
+					button.address-block__btn.btn.js-popup-btn(type='button')
+						span Самара
+						svg(class='address-block__btn-icon' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='12', height='14', viewbox='0 0 12 14')
+							defs
+								path#7zrna(d='M634 118.2l-1.2-1.24-2.92 2.88V113l-1.76.02v6.8l-2.94-2.84-1.18 1.2 5 4.82z')
+							g
+								g(transform='translate(-623 -111)')
+									use(fill='#fff', xlink:href='#7zrna')
 
-				+e.mid-address
-					p Московское шоссе д. 3 офисы: 301Б, 302, 309
-					p Время работы: Пн-пт, 09:00-18:00
+					.address-block__text
+						p Московское шоссе д. 3 офисы: 301Б, 302, 309
+						p
+							strong Время работы:
+							= ' '
+							| Пн-пт, 09:00-18:00
 
-			+e.mid-col
-				+e.tel-block.tel-block
+				+e.mid-col.tel-block
 					p Наши телефоны:
-					a(href='+78462767888') +7 (846) 27-67-888
-					a(href='+78462766888') +7 (846) 27-66-888
+					a(href='+78462767888')
+						span +7 (846)
+						= ' '
+						| 27-67-888
+					a(href='+78462766888')
+						span +7 (846)
+						= ' '
+						| 27-66-888
 
-			+e.mid-col
-				+e.actions
-					+e.A.btn.btn._red(href='#!') Заказать звонок
-					+e.A.btn.btn._grey(href='#!') Задать вопрос
+				+e.mid-col
+					+e.A.btn.btn._red-line(href='#!') Заказать звонок
+					+e.A.btn.btn._grey-line(href='#!') Задать вопрос
 
 	+e.bot
-		+e.container.container
-			ul
-				li: a(href='#!') УСлуги для юридических лиц
-				li: a(href='#!') услуги для физических лиц
-				li: a(href='#!') цены на услуги
-				li: a(href='#!') бухгалтерские услуги
+		+e.bot-container.container
+			+e.NAV.nav
+				ul
+					li
+						a(href='#!')
+							span услуги для юридических лиц
+						ul
+							li
+								+e.A.nav-icon._01(href='#!')
+									span Споры
+
+							li
+								+e.A.nav-icon._02(href='#!')
+									span Регистрация
+
+							li
+								+e.A.nav-icon._03(href='#!')
+									span Кадастровая оценка
+
+							li
+								+e.A.nav-icon._04(href='#!')
+									span Исполнительное производство
+
+							li
+								+e.A.nav-icon._05(href='#!')
+									span Перевод жилых помещений
+
+							li
+								+e.A.nav-icon._06(href='#!')
+									span Абонентсоке юридическое обслуживание
+
+							li
+								+e.A.nav-icon._07(href='#!')
+									span Составление договоров и экспертиза
+
+					li
+						a(href='#!')
+							span услуги для физических лиц
+						ul
+							li
+								+e.A.nav-icon._01(href='#!')
+									span Споры
+
+							li
+								+e.A.nav-icon._06(href='#!')
+									span Автоэкспертиза
+
+							li
+								+e.A.nav-icon._03(href='#!')
+									span Кадастровая оценка
+
+							li
+								+e.A.nav-icon._05(href='#!')
+									span Перевод жилых помещений
+
+							li
+								+e.A.nav-icon._04(href='#!')
+									span Исполнительное производство
+
+							li
+								+e.A.nav-icon._07(href='#!')
+									span Банкротство физ. лиц
+
+							li
+								+e.A.nav-icon._09(href='#!')
+									span Защита прав потребителей
+
+							li
+								+e.A.nav-icon._08(href='#!')
+									span Помощь при банкротстве страховых
+
+					li: a(href='#!')
+						span цены на услуги
+					li: a(href='#!')
+						span бухгалтерские услуги
 
 			+e.search-field.search-field
 				+e.FORM(action='#!' method='POST')
 					+e.INPUT(type='text' placeholder='Поиск по сайту' name='' required)
 
 					+e.LABEL
-						+e.INPUT.form-submit(type='submit' value='')
+						+e.INPUT(type='submit' value='')
 						svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='19', height='19', viewbox='0 0 19 19')
 							defs
 								path#9bq7a(d='M1337.72 260.49c0 .33-.12.62-.37.86-.24.25-.53.37-.86.37-.35 0-.64-.12-.87-.37l-3.3-3.28a6.58 6.58 0 0 1-3.83 1.19 6.77 6.77 0 0 1-6.24-4.14 6.65 6.65 0 0 1 0-5.26 6.77 6.77 0 0 1 3.6-3.6 6.65 6.65 0 0 1 5.27 0 6.77 6.77 0 0 1 3.6 3.6c.36.83.54 1.71.54 2.63 0 1.4-.4 2.69-1.2 3.83l3.3 3.3c.24.24.36.53.36.87zm-4.92-8c0-1.19-.43-2.2-1.27-3.05a4.15 4.15 0 0 0-3.04-1.26c-1.19 0-2.2.42-3.05 1.26a4.15 4.15 0 0 0-1.26 3.05c0 1.18.42 2.2 1.26 3.04a4.15 4.15 0 0 0 3.05 1.27c1.18 0 2.2-.43 3.04-1.27a4.15 4.15 0 0 0 1.27-3.04z')

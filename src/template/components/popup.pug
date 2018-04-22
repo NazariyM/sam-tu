@@ -1,0 +1,30 @@
+mixin popup(el)
+	case el.name
+
+		when 'changeCity'
+			+b.popup.js-popup
+				+b.change-city
+					+e.title
+						h3 Выберите город
+					+e.list
+						-
+							cityList = [{
+							img: 'samara_logo',
+							name: 'Самара'
+							}, {
+							img: 'togliatti_logo',
+							name: 'Тольятти'
+							}, {
+							img: 'syzran_logo',
+							name: 'Сызрань'
+							}]
+
+						mixin cityItem(item)
+							+e.A.item(href='#!')
+								+e.DIV.item-img
+									+e.IMG(src=`static/img/content/${item.img}.png` alt= item.name title= item.name)
+								+e.DIV.item-title
+									h5= item.name
+
+						each item in cityList
+							+cityItem(item)

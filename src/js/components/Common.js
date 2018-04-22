@@ -1,10 +1,10 @@
 import objectFitImages from 'object-fit-images';
-// import fancybox from '@fancyapps/fancybox';
+import fancybox from '@fancyapps/fancybox';
 import './NoTouch';
 
-// import './Anims';
-// import './Header';
-// import './Slider';
+import './Anims';
+import './Popup';
+import './Slider';
 import './Dot';
 
 // import './ContactMap';

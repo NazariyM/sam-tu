@@ -2,6 +2,11 @@
    &__container
       display: flex
       
+   &__row
+      display: flex
+      flex: 1 1 auto
+      margin: 0 -15px
+      
    &__top
       padding: 21px 0
       background-color: #f1f5f9
@@ -19,8 +24,188 @@
                +f('pm-400', 15)
                color: #606162
                
+   &__mid
+      padding: 25px 0
+      &-col
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         flex: 1 1 auto
+         padding: 0 15px
+         &:nth-child(4)
+            flex: 0 1 auto
+   
+   &__btn
+      &:not(:last-child)
+         margin-bottom: 7px
+               
    &__logo
       display: block
       width: 174px
       height: 98px
       +cover-img
+      
+   &__bot
+      background-color: #dc3531
+      &-container
+         position: relative
+         display: flex
+         align-items: center
+         justify-content: space-between
+         
+   &__nav
+      > ul
+         display: flex
+         > li
+            display: inline-flex
+            align-items: center
+            height: 60px
+            &:hover
+               > a::after
+                  transform: scaleY(1)
+               > ul
+                  pointer-events: auto
+                  opacity: 1
+                  transform: translateY(0)
+                  z-index: 99
+                  
+            .no-touch &:hover a
+               color: $color1
+               
+            //&:nth-child(3) a::after,
+            //&:nth-child(4) a::after
+            //   display: none
+               
+            &:not(:last-child)
+               margin-right: 40px
+            > a
+               position: relative
+               display: flex
+               align-items: center
+               height: 100%
+               +f('pm-700', 14)
+               color: #fff
+               text-transform: uppercase
+               transition: .3s ease
+               .no-touch &:hover
+                  color: #20201f
+                  
+               &::after
+                  pointer-events: none
+                  position: absolute
+                  left: -15px
+                  right: -15px
+                  top: 0
+                  bottom: 0
+                  z-index: 0
+                  background: #f1f5f9
+                  content: ''
+                  transform-origin: 0 0
+                  transform: scaleY(0)
+                  transition: .3s ease
+                  
+               span
+                  position: relative
+                  z-index: 1
+                  
+            > ul
+               pointer-events: none
+               position: absolute
+               display: flex
+               top: 100%
+               left: 0
+               right: 0
+               min-height: 165px
+               padding: 25px 15px
+               z-index: 1
+               background: #f1f5f9
+               text-align: left
+               opacity: 0
+               transform: translateY(15%)
+               transition: .3s ease
+               box-shadow: 0 0 10px rgba(51, 51, 51, 0.5)
+               
+               > li
+                  display: flex
+                  justify-content: center
+                  flex: 1 0 auto
+                  > a
+                     display: flex
+                     flex-direction: column
+                     align-items: center
+                     color: #000
+                     text-transform: none
+                     +f('pm-400', 16)
+                     .no-touch &:hover span
+                        color: $color2
+                     
+                  span
+                     display: block
+                     padding-top: 10px
+                     text-align: center
+                     transition: .3s ease-in-out
+                     
+      &-icon
+         width: 110px
+         height: 50px
+         transition: .3s ease-in-out
+         padding-top: 50px
+         
+// nav sprite
+.header__nav-icon_01, .header__nav-icon_01_1, .header__nav-icon_02, .header__nav-icon_02_1, .header__nav-icon_03, .header__nav-icon_03_1, .header__nav-icon_04, .header__nav-icon_04_1, .header__nav-icon_05, .header__nav-icon_05_1, .header__nav-icon_06, .header__nav-icon_06_1, .header__nav-icon_07, .header__nav-icon_07_1, .header__nav-icon_08, .header__nav-icon_08_1, .header__nav-icon_09, .header__nav-icon_09_1, .header__nav-icon_10_1, .header__nav-icon_10, .header__nav-icon_11, .header__nav-icon_11_1
+   background: url(../img/sprites/nav_icons.png) no-repeat
+
+.header__nav-icon_01
+   background-position: 30px 0
+   &:hover
+      background-position: 30px -106.95488px
+
+.header__nav-icon_02
+   background-position: -716.97574px -199.95833px
+   &:hover
+      background-position: -718.00003px -298.96181px
+
+.header__nav-icon_03
+   background-position: -265.97919px -48.98264px
+   &:hover
+      background-position: -268.97223px -146.99652px
+
+.header__nav-icon_04
+   background-position: -319.96878px -596.96184px
+   &:hover
+      background-position: -321.96182px -744.9688px
+
+.header__nav-icon_05
+   background-position: -718px -454.98611px
+   &:hover
+      background-position: -719.9653px -550.98613px
+
+.header__nav-icon_06
+   background-position: -718px 0
+   &:hover
+      background-position: -718px -99.97569px
+
+.header__nav-icon_07
+   background-position: 30px -198.97917px
+   &:hover
+      background-position: 30px -350.98264px
+
+.header__nav-icon_08
+   background-position: 30px -449.97917px
+   &:hover
+      background-position: 29.99655px -549.97917px
+
+.header__nav-icon_09
+   background-position: -370.9827px -246.97917px
+   &:hover
+      background-position: -370.94797px -403.95836px
+
+.header__nav-icon_10
+   background-position: 30px -649.95488px
+   &:hover
+      background-position: 30px -750px
+
+.header__nav-icon_11
+   background-position: -720px -643.94099px
+   &:hover
+      background-position: -720px -751px

@@ -1,0 +1,352 @@
+// begin screen //
+.screen
+   display: none
+   &.slick-initialized
+      display: block
+   &__item
+      position: relative
+      height: 500px
+      background: #f1f5f9
+      &_1
+         .screen__info-item
+            &:nth-child(2)
+               flex: 0 0 245px
+         
+      &_2
+         .screen__title
+            max-width: 530px
+         .screen__info
+            max-width: 550px
+         
+      &_3
+         .screen__title
+            max-width: 500px
+         .screen__inner
+            max-width: 710px
+         .screen__info-item
+            &:nth-child(1)
+               flex: 0 0 200px
+               
+      &_4
+         .screen__title
+            max-width: 620px
+         .screen__inner
+            max-width: 700px
+         .screen__info-item
+            &:nth-child(1)
+               flex: 0 0 400px
+               
+      &_5
+         .screen__info
+            max-width: 640px
+            flex-wrap: wrap
+         .screen__info-item
+            flex: 0 0 50%
+            margin-bottom: 15px
+            &:nth-child(2n)
+               flex: 0 0 45%
+               
+         .screen__form
+            margin-top: -15px
+   
+   &__container
+      position: relative
+      z-index: 1
+      height: 100%
+      display: flex
+      align-items: center
+      
+   &__inner
+      position: relative
+      z-index: 3
+      max-width: 650px
+      
+   &__info
+      display: flex
+      margin: 0 -15px 30px
+      padding-left: 13px
+      &-item
+         display: flex
+         align-items: center
+         padding: 0 15px
+         &_1
+            flex: 1 1 382px
+         &_2
+            flex: 1 1 225px
+            
+         svg
+            flex-shrink: 0
+            margin-right: 10px
+            
+         p
+            +f('pm-400', 16, 20)
+            
+   &__form
+      display: flex
+      &-field
+         flex: 0 0 210px
+         padding: 0 5px
+         
+      &-submit
+         min-width: 225px
+   
+   &__title
+      margin-bottom: 20px
+      text-align: left
+      font-size: 35px
+      padding-left: 12px
+      +f('pm-700')
+      
+   &__img
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+      +cover
+      &_1
+         right: -132px
+         width: 747px
+         height: 500px
+         
+      &_2
+         top: 24px
+         right: -109px
+         width: 703px
+         height: 444px
+         
+      &_3
+         right: 26px
+         top: 14px
+         width: 417px
+         height: 486px
+         
+      &_4
+         top: 33px
+         right: 8px
+         width: 380px
+         height: 427px
+      &_5
+         top: 26px
+         right: 20px
+         width: 391px
+         height: 474px
+   
+   &__bg
+      +coverdiv
+      +cover
+      opacity: .15
+
+// end screen //
+
+// begin services //
+.services
+   padding: 70px 0
+   &__row
+      display: flex
+      margin: 0 -15px
+      
+   &__col
+      flex: 0 1 50%
+      padding: 0 15px
+   
+   &__sub-col
+      float: left
+      width: 50%
+      &:nth-child(2)
+         padding-right: 15px
+      &:nth-child(3)
+         padding-left: 15px
+   
+   &__title
+      margin-bottom: 35px
+      +f('pm-100')
+      font-size: 38px
+      line-height: 40px
+      
+   &__item
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      &:not(:last-child)
+         margin-bottom: 15px
+      &-title
+         display: flex
+         align-items: center
+         margin-bottom: 15px
+         +f('pm-600', 20, 20)
+         svg
+            margin-right: 14px
+            
+      a
+         &:not(:last-child)
+            margin-bottom: 7px
+// end services //
+            
+// begin about //
+.about
+   &__container
+      display: flex
+      align-items: center
+      
+   &__content
+      display: flex
+      background-color: #f5f8fb
+      
+   &__row
+      display: flex
+      margin: 0 -15px
+   &__info
+      padding-right: 30px
+      &-row
+         display: flex
+         margin: 0 -20px 25px
+
+      &-title
+         margin-bottom: 30px
+         text-align: left
+         
+      &-descr
+         margin-bottom: 20px
+      p
+         &:not(:last-child)
+            margin-bottom: 20px
+            
+      &-btn
+         min-width: 190px
+   
+   &__item
+      flex: 0 0 25%
+      padding: 0 20px
+      text-align: center
+      &-count
+         margin-bottom: 10px
+         +f('pm-700', 30, 30)
+         color: #dc3531
+         
+      &-text
+         max-width: 125px
+         margin: 0 auto
+         +f('pm-400', 16, 20)
+         
+         
+   &__events
+      flex: 0 0 350px
+      padding: 35px 28px
+      margin: -30px 0
+      background-color: #dc3531
+      color: #fff
+      &-title
+         margin-bottom: 10px
+         text-align: left
+         
+      &-item
+         &:not(:last-child)
+            margin-bottom: 20px
+         &-date
+            margin-bottom: 5px
+            +f('pm-700')
+         
+      &-decor-link
+         span
+            color: #fff
+            border-bottom-color: rgba(#fff, .5)
+            
+         .no-touch &:hover span
+            border-bottom-color: #fff
+            
+   &__video
+      padding: 60px 0
+      background: #fff
+      &-col
+         flex: 0 1 50%
+         padding: 0 15px
+         
+         iframe
+            width: 100%
+            height: 303px
+         
+         p
+            &:not(:last-child)
+               margin-bottom: 20px
+               
+            i
+               +f('pm-300i')
+
+// end about //
+
+// begin clients //
+.clients
+   position: relative
+   display: flex
+   flex-wrap: wrap
+   .no-touch &:hover .clients__title
+      opacity: 0
+      pointer-events: none
+   
+   &__title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+      color: #fff
+      cursor: default
+      transition: .3s ease-in-out
+      
+   &__logo
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      flex: 0 0 calc(100% / 8)
+      height: 100px
+      min-width: 200px
+      text-align: center
+      background-color: #333333
+      transition: .3s ease-in-out
+      .no-touch &:hover
+         background-color: #f5f8fb
+      .no-touch &:hover img:nth-child(1)
+         opacity: 1
+      .no-touch &:hover img:nth-child(2)
+         opacity: 0
+      img
+         position: absolute
+         top: 50%
+         left: 50%
+         transform: translate3d(-50%, -50%, 0)
+         transition: opacity .3s ease-in-out
+         &:nth-child(1)
+            opacity: 0
+// end clients //
+
+// begin testimonials //
+.testimonials
+   padding: 70px 0
+   
+   &__inner
+      display: none
+      &.slick-initialized
+         display: block
+   
+      .slick-list
+         margin: 0 -12px
+   
+   &__title
+      margin-bottom: 40px
+      
+   &__item
+      position: relative
+      margin: 0 12px
+      +cover-img
+      .no-touch &:hover::after
+         opacity: 1
+      &::after
+         opacity: 0
+         +coverdiv
+         background: rgba(#000, .3)
+         +trs
+         content: ''
+
+// end testimonials //

@@ -7,21 +7,27 @@
 		font-weight: normal
 		font-style: normal
 
-+font('ProximaNova-Light', 'ProximaNova-Light')
-+font('ProximaNova-Regular', 'ProximaNova-Regular')
-+font('ProximaNova-Semibold', 'ProximaNova-Semibold')
 +font('ProximaNova-Bold', 'ProximaNova-Bold')
++font('ProximaNova-Regular', 'ProximaNova-Regular')
++font('ProximaNova-Light', 'ProximaNova-Light')
++font('ProximaNova-LightIt', 'ProximaNova-LightIt')
++font('ProximaNovaT-Thin', 'ProximaNovaT-Thin')
++font('ProximaNova-Semibold', 'ProximaNova-Semibold')
 
 =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
 	$font-family: null
-	@if $name == "pm-300"
-		$font-family: "ProximaNova-Light"
+	@if $name == "pm-700"
+		$font-family: "ProximaNova-Bold"
 	@if $name == "pm-400"
 		$font-family: "ProximaNova-Regular"
 	@if $name == "pm-600"
 		$font-family: "ProximaNova-Semibold"
-	@if $name == "pm-700"
-		$font-family: "ProximaNova-Bold"
+	@if $name == "pm-300i"
+		$font-family: "ProximaNova-LightIt"
+	@if $name == "pm-300"
+		$font-family: "ProximaNova-Light"
+	@if $name == "pm-100"
+		$font-family: "ProximaNovaT-Thin"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 		font-weight: normal
