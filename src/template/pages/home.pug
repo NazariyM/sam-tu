@@ -426,7 +426,7 @@ block main
 			.container
 				+e.row
 					+e.video-col(data-anim='fade-x')
-						iframe(width='540', height='303', src='https://www.youtube.com/embed/eXDU9um19HM?rel=0&showinfo=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+						iframe(width='540', height='303', src='https://www.youtube.com/embed/mfydD-gxlM0?rel=0&showinfo=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
 
 
 					+e.video-col(data-anim='fade-x')
@@ -442,15 +442,62 @@ block main
 		//end about
 			
 	//begin clients
-	+b.SECTION.clients(data-anim-stagger='fade-y' data-anim-duration='.1' data-stagger-delay='0.1')
+	+b.SECTION.clients
 		+e.title.title-md
 			h2 Наши клиенты
-		-n = 0
-		while n < 24
+
+		+e.inner(data-anim-stagger='fade-y' data-anim-duration='.1' data-stagger-delay='0.1')
 			+e.A.logo(href='#!')
-				+e.IMG(src='static/img/content/client-logo_hover.png' alt='image')
-				+e.IMG(src='static/img/content/client-logo.png' alt='image')
-			-n++
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-1.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-2.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-3.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-4.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-5.gif)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-6.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-7.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-8.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-9.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-10.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-11.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-12.png)')
+
+
+			+e.A.logo(href='#!')
+				+e.DIV.img(style='background-image: url(static/img/sprites/client_img-13.png)')
+
 	//end clients
 
 	//begin testimonials
@@ -461,10 +508,15 @@ block main
 
 			+e.inner(data-anim='fade-y' data-anim-delay='0.5')
 				-n = 0
-				while n < 7
-					+e.A.item(data-fancybox='testimonials' href='static/img/content/testimonial-img_lg.jpg')
-						+e.IMG(src='static/img/content/testimonial-img.jpg' alt='image')
+				while n < 15
+					+e.A.item(data-fancybox='testimonials' href=`static/img/content/testimonial-img_lg-${n + 1}.jpg`)
+						+e.IMG(src=`static/img/content/testimonial-img_lg-${n + 1}.jpg` alt='image')
+					-n++
 
+				-n = 15
+				while n < 21
+					+e.A.item(data-fancybox='testimonials' href=`static/img/content/testimonial-img_lg-${n + 1}.png`)
+						+e.IMG(src=`static/img/content/testimonial-img_lg-${n + 1}.png` alt='image')
 					-n++
 	//end testimonials
 

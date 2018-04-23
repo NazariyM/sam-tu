@@ -1,0 +1,70 @@
+// begin clients //
+.clients
+   position: relative
+   max-width: 1600px
+   margin: 0 auto
+   +r(1440)
+      max-width: 1190px
+   +sm
+      display: none
+   .no-touch &:hover .clients__title
+      opacity: 0
+      pointer-events: none
+   
+   &__inner
+      display: flex
+      flex-wrap: wrap
+      
+   &__title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+      color: #fff
+      cursor: default
+      transition: .3s ease-in-out
+   
+   &__logo
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      flex: 1 1 7.692307692307692%
+      height: 100px
+      min-width: 200px
+      text-align: center
+      background-color: #333
+      transition: .3s ease-in-out
+      
+      .no-touch &:hover .clients__img
+         filter: grayscale(0)
+      .no-touch &:hover
+         background-color: #f5f8fb
+         
+      &:nth-child(1) .clients__img
+         background-size: auto 25%
+      &:nth-child(2) .clients__img
+         background-size: auto 36%
+      &:nth-child(3) .clients__img
+         background-size: auto 50%
+      &:nth-child(4) .clients__img
+         background-size: auto 55%
+      &:nth-child(6) .clients__img
+         background-size: auto 72%
+      &:nth-child(8) .clients__img
+         background-size: auto 75%
+      &:nth-child(11) .clients__img
+         background-size: auto 55%
+      &:nth-child(12) .clients__img
+         background-size: auto 38%
+   
+   &__img
+      +coverdiv
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-size: auto 45%
+      filter: grayscale(100%)
+      +trs
+// end clients //
