@@ -41070,7 +41070,7 @@ var About = function () {
 
       new _scrollAnim2.default({
         el: _this.$block[0],
-        hook: .7,
+        hook: .75,
         onEnter: function onEnter() {
 
           _this.anim();

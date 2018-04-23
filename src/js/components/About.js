@@ -24,7 +24,7 @@ class About {
 
     new ScrollAnim({
       el: _this.$block[0],
-      hook: .7,
+      hook: .75,
       onEnter() {
 
         _this.anim();
