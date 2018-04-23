@@ -1,4 +1,6 @@
 .header
+   position: relative
+   z-index: 1
    &__container
       display: flex
       
@@ -44,19 +46,17 @@
          &:nth-child(1)
             li
                &:not(:last-child)
-                  margin-right: 44px
-                  +md
-                     margin-right: 30px
+                  margin-right: 15px
                   
          &:nth-child(1)
             +xs
                display: none
          &:nth-child(2)
-            +sm
+            +md
                display: none
             li
                &:not(:last-child)
-                  margin-right: 35px
+                  margin-right: 15px
                   
          li
             line-height: 1
