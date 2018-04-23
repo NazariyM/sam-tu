@@ -34450,6 +34450,7 @@ var Header = function () {
     _classCallCheck(this, Header);
 
     this.$nav = $('.header__nav');
+    this.$menuBtn = $('.header__nav-icon');
     this.$navBtn = $('.nav-btn');
 
     this.init();
@@ -34464,6 +34465,7 @@ var Header = function () {
     key: 'bindEvents',
     value: function bindEvents() {
       this.show();
+      this.toggleDetailedMenu();
 
       if (!_helpers.Resp.isDesk) {
         this.toggleNav();
@@ -34498,6 +34500,20 @@ var Header = function () {
         $this.toggleClass(_helpers.css.active);
         $this.parent().siblings().find('ul').slideUp();
         $this.parent().siblings().find('a').removeClass(_helpers.css.active);
+      });
+    }
+  }, {
+    key: 'toggleDetailedMenu',
+    value: function toggleDetailedMenu() {
+      var _this = this;
+
+      this.$menuBtn.on('click tap', function (e) {
+        var $this = $(this);
+
+        $this.parent().siblings().find('.header__nav-menu').hide();
+        $this.parent().siblings().removeClass(_helpers.css.active);
+        $this.parent().addClass(_helpers.css.active);
+        $this.next('.header__nav-menu').show();
       });
     }
   }]);
