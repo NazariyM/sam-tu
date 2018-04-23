@@ -1,0 +1,57 @@
+.footer
+   padding: 50px 0
+   +xs
+      padding: 17px 0
+   &__container
+      +xs
+         padding: 0 10px
+   &__row
+      display: flex
+      margin: 0 -15px
+      +md
+         justify-content: space-between
+      +xs
+         margin: 0 -10px
+         align-items: center
+   
+   &__col
+      padding: 0 15px
+      flex: 0 0 280px
+      +xs
+         padding: 0 10px
+      &:nth-child(1)
+         +sm
+            flex: 0 0 150px
+         +xs
+            flex: 0 0 113px
+      &:nth-child(2)
+         +sm
+            flex: 0 0 240px
+         +xs
+            display: none
+         p
+            padding-right: 25px
+         
+      &:nth-child(3)
+         flex: 0 0 230px
+         +sm
+            flex: 0 1 auto
+         +xs
+            margin: 0 -10px
+      &:nth-child(4)
+         flex: 0 1 auto
+      &:nth-child(5)
+         flex: 0 1 200px
+         display: flex
+         flex-direction: column
+         +md
+            display: none
+   
+   &__logo
+   
+   &__btn
+      &:not(:last-child)
+         margin-bottom: 7px
+         
+   &__socials
+      margin-top: 10px

@@ -1,6 +1,6 @@
 class ContactMap {
   constructor() {
-    this.$block = $('.contacts');
+    this.$block = $('.contact-map');
 
     if (this.$block.length) this.init();
   }
@@ -10,23 +10,16 @@ class ContactMap {
   }
 
   createMap() {
+    ymaps.ready(init);
 
-    const map = new google.maps.Map(document.querySelector('.contacts__map'), {
-      center: new google.maps.LatLng(55.769438, 37.627655),
-      zoom: 17,
-      disableDefaultUI: true,
-      styles: [{
-        stylers: [{
-          saturation: -100
-        }]
-      }]
-    });
+    function init() {
+      const contactMap = new ymaps.Map('contact-map', {
+        center: [53.202714093637596, 50.148667339286796],
+        zoom: 17,
+        controls: []
+      });
+    }
 
-    const marker = new google.maps.Marker({
-      position: new google.maps.LatLng(55.769613, 37.626198),
-      icon: 'static/img/other/map-marker.png',
-      map: map
-    });
   }
 
 }

@@ -1,5 +1,5 @@
 //begin header
-+b.HEADER.header.no-transition(class= headerClass ? headerClass : '')
++b.HEADER.header(class= headerClass ? headerClass : '')
 	+e.top
 		+e.top-container.container
 			-
@@ -17,20 +17,30 @@
 				for menuText in menuList
 					li: a(href='#!')= menuText
 
-			+e.top-right
-				ul
-					li: a(href='#!') Бухгалтерия
-					li: a(href='#!') Оценка
-					li: a(href='#!') Экспертиза
+			ul
+				li: a(href='#!') Бухгалтерия
+				li: a(href='#!') Оценка
+				li: a(href='#!') Экспертиза
+
+			+e.top-tels
+				a(href='tel:+78462767888')
+					span +7 (846)
+					= ' '
+					| 27-67-888
+				a(href='tel:+78462766888')
+					span +7 (846)
+					= ' '
+					| 27-66-888
 
 	+e.mid
 		+e.container.container
 			+e.row
 				+e.mid-col
-					+e.A.logo(href='#!')
+					+e.A.logo.logo(href='#!')
 						+e.IMG(src='static/img/other/logo.png' alt='Технология управления')
 				+e.mid-col.address-block
 					button.address-block__btn.btn.js-popup-btn(type='button')
+						span.address-block__mob-text Ваш город:
 						span Самара
 						svg(class='address-block__btn-icon' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='12', height='14', viewbox='0 0 12 14')
 							defs
@@ -48,11 +58,11 @@
 
 				+e.mid-col.tel-block
 					p Наши телефоны:
-					a(href='+78462767888')
+					a(href='tel:+78462767888')
 						span +7 (846)
 						= ' '
 						| 27-67-888
-					a(href='+78462766888')
+					a(href='tel:+78462766888')
 						span +7 (846)
 						= ' '
 						| 27-66-888
@@ -63,10 +73,14 @@
 
 	+e.bot
 		+e.bot-container.container
+			+b.BUTTON.nav-btn(type='button')
+				+e.SPAN.icon
+				+e.SPAN.text Меню
+
 			+e.NAV.nav
 				ul
 					li
-						a(href='#!')
+						a(href='#!').nav-dropdown-btn
 							span услуги для юридических лиц
 						ul
 							li
@@ -98,7 +112,7 @@
 									span Составление договоров и экспертиза
 
 					li
-						a(href='#!')
+						a(href='#!').nav-dropdown-btn
 							span услуги для физических лиц
 						ul
 							li
@@ -137,6 +151,8 @@
 						span цены на услуги
 					li: a(href='#!')
 						span бухгалтерские услуги
+
+			+e.BUTTON.mob-call-btn(type='button') ЗАКАЗАТЬ ЗВОНОК
 
 			+e.search-field.search-field
 				+e.FORM(action='#!' method='POST')

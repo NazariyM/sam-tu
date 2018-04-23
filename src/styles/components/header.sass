@@ -6,61 +6,168 @@
       display: flex
       flex: 1 1 auto
       margin: 0 -15px
-      
+      +sm
+         justify-content: space-between
+      +xs
+         margin: 0 -10px
+   
    &__top
       padding: 21px 0
       background-color: #f1f5f9
+      transform: translateY(-50px)
+      opacity: 0
+      +xs
+         padding: 16px 0
       &-container
          display: flex
          align-items: center
          justify-content: space-between
+         
+      &-tels
+         display: none
+         padding: 0 2px
+         width: 100%
+         justify-content: space-between
+         +xs
+            display: flex
+            a
+               +f('pm-600', 16)
+               span
+                  +f('pm-400')
+         
       ul
          display: flex
+         +sm
+            justify-content: space-between
+            width: 100%
+         
+         &:nth-child(1)
+            li
+               &:not(:last-child)
+                  margin-right: 44px
+                  +md
+                     margin-right: 30px
+                  
+         &:nth-child(1)
+            +xs
+               display: none
+         &:nth-child(2)
+            +sm
+               display: none
+            li
+               &:not(:last-child)
+                  margin-right: 35px
+                  
          li
             line-height: 1
-            &:not(:last-child)
-               margin-right: 15px
+            
             a
                +f('pm-400', 15)
                color: #606162
+               +trs
+               .no-touch &:hover
+                  color: $color2
                
    &__mid
-      padding: 25px 0
+      padding: 40px 0 34px
+      transform: translateY(-50px)
+      opacity: 0
+      +sm
+         padding: 25px 0 20px
       &-col
          display: flex
          flex-direction: column
          align-items: flex-start
          flex: 1 1 auto
          padding: 0 15px
+         +sm
+            justify-content: center
+         +xs
+            padding: 0 10px
+         &:nth-child(1)
+            flex: 0 0 285px
+            +md
+               flex: 0 0 195px
+            +sm
+               flex: 0 0 170px
+            +xs
+               flex: 0 0 125px
+         &:nth-child(2)
+            flex: 0 0 395px
+            +md
+               flex: 0 0 380px
+            +xs
+               flex: 0 1 auto
+         &:nth-child(3)
+            margin-top: 4px
+            +sm
+               flex: 0 0 215px
+               margin-top: 0
+            +xs
+               display: none
          &:nth-child(4)
             flex: 0 1 auto
+            +sm
+               display: none
    
    &__btn
       &:not(:last-child)
          margin-bottom: 7px
-               
-   &__logo
-      display: block
-      width: 174px
-      height: 98px
-      +cover-img
-      
    &__bot
+      transform: translateY(-50px)
+      opacity: 0
       background-color: #dc3531
+      +sm
+         padding: 10px 0
       &-container
          position: relative
          display: flex
          align-items: center
          justify-content: space-between
+         +sm
+            flex-wrap: wrap
+         
+   &__search-field
+      +sm
+         flex: 0 0 250px
+         width: 250px
+      +xs
+         display: none
+         
+   &__mob-call-btn
+      display: none
+      margin: 3px 20px 0 auto
+      +f('pm-600', 15)
+      text-transform: uppercase
+      color: #fff
+      border-bottom: 1px solid rgba(#fff, .4)
+      +sm
+         display: block
+      +xs
+         margin: 0 auto
          
    &__nav
+      +sm
+         display: none
+         flex: 0 1 auto
+         width: calc(100% + 30px)
+         padding: 15px 0 0
+         margin: 0 -15px
+         order: 1
       > ul
          display: flex
+         +sm
+            flex-direction: column
+            box-shadow: 0 -5px 10px rgba(#20201e, .3), 0 5px 10px rgba(#20201e, .3)
          > li
             display: inline-flex
             align-items: center
             height: 60px
-            &:hover
+            +sm
+               flex-wrap: wrap
+               justify-content: center
+               height: auto
+            .no-touch &:hover
                > a::after
                   transform: scaleY(1)
                > ul
@@ -68,16 +175,17 @@
                   opacity: 1
                   transform: translateY(0)
                   z-index: 99
+                  +sm
+                     transform: none
                   
             .no-touch &:hover a
                color: $color1
                
-            //&:nth-child(3) a::after,
-            //&:nth-child(4) a::after
-            //   display: none
-               
             &:not(:last-child)
-               margin-right: 40px
+               margin-right: 44px
+               +sm
+                  margin-right: 0
+                  border-bottom: 1px solid #f1f5f9
             > a
                position: relative
                display: flex
@@ -87,8 +195,19 @@
                color: #fff
                text-transform: uppercase
                transition: .3s ease
+               +md
+                  font-size: 12px
+               +sm
+                  padding: 15px 0
+                  justify-content: center
+                  width: 100%
                .no-touch &:hover
                   color: #20201f
+                  
+               &.is-active
+                  color: $color1
+               &.is-active::after
+                  transform: scaleY(1)
                   
                &::after
                   pointer-events: none
@@ -103,6 +222,9 @@
                   transform-origin: 0 0
                   transform: scaleY(0)
                   transition: .3s ease
+                  +sm
+                     right: 0
+                     left: 0
                   
                span
                   position: relative
@@ -124,11 +246,35 @@
                transform: translateY(15%)
                transition: .3s ease
                box-shadow: 0 0 10px rgba(51, 51, 51, 0.5)
-               
+               +sm
+                  display: none
+                  pointer-events: auto
+                  position: static
+                  top: auto
+                  left: auto
+                  right: auto
+                  min-height: 0
+                  width: 100%
+                  opacity: 1
+                  flex-direction: column
+                  transition: none
+                  transform: none
+               +xs
+                  padding: 20px 15px
+                  
                > li
                   display: flex
                   justify-content: center
                   flex: 1 0 auto
+                  +sm
+                     justify-content: flex-start
+                     
+                  &:not(:last-child)
+                     +sm
+                        margin-bottom: 10px
+                     +xs
+                        margin-bottom: 15px
+                        
                   > a
                      display: flex
                      flex-direction: column
@@ -138,19 +284,42 @@
                      +f('pm-400', 16)
                      .no-touch &:hover span
                         color: $color2
-                     
+                        
+                     +xs
+                        align-items: flex-start
+                        line-height: 20px
+                        
                   span
-                     display: block
+                     display: table
                      padding-top: 10px
                      text-align: center
                      transition: .3s ease-in-out
+                     +sm
+                        position: absolute
+                        left: 100%
+                        top: 50%
+                        white-space: nowrap
+                        transform: translateY(-50%)
+                        padding-top: 0
+                     +xs
+                        position: static
+                        transform: none
+                        white-space: normal
+                        text-align: left
                      
       &-icon
          width: 110px
          height: 50px
          transition: .3s ease-in-out
          padding-top: 50px
-         
+         +sm
+            position: relative
+         +xs
+            padding-top: 0
+            width: 100%
+            height: auto
+            background: 0
+
 // nav sprite
 .header__nav-icon_01, .header__nav-icon_01_1, .header__nav-icon_02, .header__nav-icon_02_1, .header__nav-icon_03, .header__nav-icon_03_1, .header__nav-icon_04, .header__nav-icon_04_1, .header__nav-icon_05, .header__nav-icon_05_1, .header__nav-icon_06, .header__nav-icon_06_1, .header__nav-icon_07, .header__nav-icon_07_1, .header__nav-icon_08, .header__nav-icon_08_1, .header__nav-icon_09, .header__nav-icon_09_1, .header__nav-icon_10_1, .header__nav-icon_10, .header__nav-icon_11, .header__nav-icon_11_1
    background: url(../img/sprites/nav_icons.png) no-repeat
@@ -209,3 +378,79 @@
    background-position: -720px -643.94099px
    &:hover
       background-position: -720px -751px
+      
+.nav-btn
+   display: none
+   position: relative
+   background-color: transparent
+   width: 40px
+   height: 36px
+   cursor: pointer
+   +sm
+      display: block
+   +xs
+      margin-right: 15px
+      
+   &::after
+      display: none
+      position: absolute
+      top: -10px
+      right: -15px
+      width: 1px
+      background: rgba(#fff, .2)
+      height: 56px
+      content: ''
+      +xs
+         display: block
+      
+   &__text
+      position: absolute
+      left: 100%
+      top: 50%
+      margin-left: 15px
+      margin-top: -7px
+      +f('pm-600', 15)
+      text-transform: uppercase
+      color: #fff
+      +xs
+         display: none
+
+.nav-btn__icon
+   border-bottom: 6px solid #fff
+   display: block
+   transition: border-color .25s
+   transition-delay: .15s
+   border-radius: 10px
+   &:before, &:after
+      border-top: 6px solid #fff
+      border-radius: 10px
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+   &:before
+      top: 4px
+   &:after
+      bottom: 4px
+      transition-property: transform, border-color
+      transition-duration: 0.25s
+      transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5)
+   &:before, &:after
+      transition-property: transform, border-color
+      transition-duration: 0.25s
+      transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5)
+      transition-delay: 0.125s
+   &:before, &:after
+      transition-delay: 0s
+      transform-origin: center
+
+.nav-btn.is-active .nav-btn__icon
+   transition-delay: 0s
+   border-bottom-color: transparent
+   &:before, &:after
+      transition-delay: 0.125s
+   &:before
+      transform: translateY(13px) rotate(135deg)
+      border-color: #fff
+   &:after
+      transform: translateY(-9px) rotate(-135deg)

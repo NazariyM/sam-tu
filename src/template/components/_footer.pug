@@ -1,6 +1,41 @@
 //begin footer
 +b.FOOTER.footer(data-anim='fade-y' data-anim-duration='1')
 	+e.container.container
+		+e.row
+			+e.col
+				+e.A.logo.logo(href='#!')
+					+e.IMG(src='static/img/other/logo.png' alt='Технология управления')
 
+			+e.col.address-block
+				button.address-block__btn.btn.js-popup-btn(type='button')
+					span Самара
+					svg(class='address-block__btn-icon' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='12', height='14', viewbox='0 0 12 14')
+						defs
+							path#7zrna(d='M634 118.2l-1.2-1.24-2.92 2.88V113l-1.76.02v6.8l-2.94-2.84-1.18 1.2 5 4.82z')
+						g
+							g(transform='translate(-623 -111)')
+								use(fill='#fff', xlink:href='#7zrna')
+
+				.address-block__text
+					p Московское шоссе д. 3 офисы: 301Б, 302, 309
+
+			+e.col.tel-block
+				p Наши телефоны:
+				a(href='tel:+78462767888')
+					span +7 (846)
+					= ' '
+					| 27-67-888
+				a(href='tel:+78462766888')
+					span +7 (846)
+					= ' '
+					| 27-66-888
+
+			+e.col
+				-socials = {classMod: 'footer__socials'}
+				include ../components/socials
+
+			+e.col
+				+e.A.btn.btn._red-line(href='#!') Заказать звонок
+				+e.A.btn.btn._grey-line(href='#!') Задать вопрос
 
 //end footer

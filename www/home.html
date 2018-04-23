@@ -16,7 +16,7 @@
       document.createElement('picture');
     </script>
     <!--begin header-->
-    <header class="header no-transition">
+    <header class="header">
       <div class="header__top">
         <div class="header__top-container container">
           <ul>
@@ -42,18 +42,22 @@
               <a href="#!">Контакты</a>
             </li>
           </ul>
-          <div class="header__top-right">
-            <ul>
-              <li>
-                <a href="#!">Бухгалтерия</a>
-              </li>
-              <li>
-                <a href="#!">Оценка</a>
-              </li>
-              <li>
-                <a href="#!">Экспертиза</a>
-              </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#!">Бухгалтерия</a>
+            </li>
+            <li>
+              <a href="#!">Оценка</a>
+            </li>
+            <li>
+              <a href="#!">Экспертиза</a>
+            </li>
+          </ul>
+          <div class="header__top-tels">
+            <a href="tel:+78462767888">
+              <span>+7 (846)</span> 27-67-888</a>
+            <a href="tel:+78462766888">
+              <span>+7 (846)</span> 27-66-888</a>
           </div>
         </div>
       </div>
@@ -61,12 +65,13 @@
         <div class="header__container container">
           <div class="header__row">
             <div class="header__mid-col">
-              <a class="header__logo" href="#!">
+              <a class="header__logo logo" href="#!">
                 <img src="static/img/other/logo.png" alt="Технология управления" title="" />
               </a>
             </div>
             <div class="header__mid-col address-block">
               <button class="address-block__btn btn js-popup-btn" type="button">
+                <span class="address-block__mob-text">Ваш город:</span>
                 <span>Самара</span>
                 <svg class="address-block__btn-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="14" viewbox="0 0 12 14">
                   <defs>
@@ -87,9 +92,9 @@
             </div>
             <div class="header__mid-col tel-block">
               <p>Наши телефоны:</p>
-              <a href="+78462767888">
+              <a href="tel:+78462767888">
                 <span>+7 (846)</span> 27-67-888</a>
-              <a href="+78462766888">
+              <a href="tel:+78462766888">
                 <span>+7 (846)</span> 27-66-888</a>
             </div>
             <div class="header__mid-col">
@@ -101,10 +106,14 @@
       </div>
       <div class="header__bot">
         <div class="header__bot-container container">
+          <button class="nav-btn" type="button">
+            <span class="nav-btn__icon"></span>
+            <span class="nav-btn__text">Меню</span>
+          </button>
           <nav class="header__nav">
             <ul>
               <li>
-                <a href="#!">
+                <a class="nav-dropdown-btn" href="#!">
                   <span>услуги для юридических лиц</span>
                 </a>
                 <ul>
@@ -146,7 +155,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#!">
+                <a class="nav-dropdown-btn" href="#!">
                   <span>услуги для физических лиц</span>
                 </a>
                 <ul>
@@ -204,6 +213,7 @@
               </li>
             </ul>
           </nav>
+          <button class="header__mob-call-btn" type="button">ЗАКАЗАТЬ ЗВОНОК</button>
           <div class="header__search-field search-field">
             <form action="#!" method="POST">
               <input type="text" placeholder="Поиск по сайту" name="" required="required" />
@@ -229,307 +239,313 @@
     <!-- Main content-->
     <main class="content"></main>
     <!--begin screen-->
-    <section class="screen">
-      <div class="screen__item screen__item_1">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__title title-md">
-              <h2>БАНКРОТСТВО ФИЗИЧЕСКИХ ЛИЦ!</h2>
-            </div>
-            <div class="screen__info">
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
-                  <defs>
-                    <path id="xsmea" d="M283 318c-13.79 0-25-11.21-25-25s11.21-25 25-25 25 11.21 25 25-11.21 25-25 25zm0-46.01A21.04 21.04 0 0 0 261.99 293 21.04 21.04 0 0 0 283 314.01 21.04 21.04 0 0 0 304.01 293 21.04 21.04 0 0 0 283 271.99zm-.38 8.29a2.97 2.97 0 1 1 0 5.93 2.97 2.97 0 0 1 0-5.93zm4.47 23.44h-8.18v-3.97h1.5V293h-1.48v-3.97h6.66v10.72h1.5z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-256 -266)">
-                      <use fill="#dc3531" xlink:href="#xsmea"></use>
+    <section class="screen" data-anim="fade-y" data-anim-delay="1">
+      <div class="screen__slider">
+        <div class="screen__item screen__item_1">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__title title-md">
+                <h2>БАНКРОТСТВО ФИЗИЧЕСКИХ ЛИЦ!</h2>
+              </div>
+              <div class="screen__info">
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
+                    <defs>
+                      <path id="xsmea" d="M283 318c-13.79 0-25-11.21-25-25s11.21-25 25-25 25 11.21 25 25-11.21 25-25 25zm0-46.01A21.04 21.04 0 0 0 261.99 293 21.04 21.04 0 0 0 283 314.01 21.04 21.04 0 0 0 304.01 293 21.04 21.04 0 0 0 283 271.99zm-.38 8.29a2.97 2.97 0 1 1 0 5.93 2.97 2.97 0 0 1 0-5.93zm4.47 23.44h-8.18v-3.97h1.5V293h-1.48v-3.97h6.66v10.72h1.5z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-256 -266)">
+                        <use fill="#dc3531" xlink:href="#xsmea"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>бесплатная консультация по банкротству с разработкой стратегии ведения процедуры!</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
-                  <defs>
-                    <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-671 -261)">
-                      <use fill="#dc3531" xlink:href="#5geoa"></use>
+                  </svg>
+                  <p>бесплатная консультация по банкротству с разработкой стратегии ведения процедуры!</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
+                    <defs>
+                      <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-671 -261)">
+                        <use fill="#dc3531" xlink:href="#5geoa"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>ведение процедуры под ключ!</p>
+                  </svg>
+                  <p>ведение процедуры под ключ!</p>
+                </div>
               </div>
+              <form class="screen__form" action="#!" method="POST">
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+                </div>
+              </form>
             </div>
-            <form class="screen__form" action="#!" method="POST">
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
-              </div>
-            </form>
+            <div class="screen__img screen__img_1" style="background-image: url(static/img/bg/screen_img-1.png)"></div>
           </div>
-          <div class="screen__img screen__img_1" style="background-image: url(static/img/bg/screen_img-1.png)"></div>
+          <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
         </div>
-        <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
-      </div>
-      <div class="screen__item screen__item_2">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__title title-md">
-              <h2>ОСПАРИВАНИЕ КАДАСТРОВОЙ СТОИМОСТИ!</h2>
-            </div>
-            <div class="screen__info">
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
-                  <defs>
-                    <path id="xsmea" d="M283 318c-13.79 0-25-11.21-25-25s11.21-25 25-25 25 11.21 25 25-11.21 25-25 25zm0-46.01A21.04 21.04 0 0 0 261.99 293 21.04 21.04 0 0 0 283 314.01 21.04 21.04 0 0 0 304.01 293 21.04 21.04 0 0 0 283 271.99zm-.38 8.29a2.97 2.97 0 1 1 0 5.93 2.97 2.97 0 0 1 0-5.93zm4.47 23.44h-8.18v-3.97h1.5V293h-1.48v-3.97h6.66v10.72h1.5z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-256 -266)">
-                      <use fill="#dc3531" xlink:href="#xsmea"></use>
+        <div class="screen__item screen__item_2">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__title title-md">
+                <h2>ОСПАРИВАНИЕ КАДАСТРОВОЙ СТОИМОСТИ!</h2>
+              </div>
+              <div class="screen__info">
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
+                    <defs>
+                      <path id="xsmea" d="M283 318c-13.79 0-25-11.21-25-25s11.21-25 25-25 25 11.21 25 25-11.21 25-25 25zm0-46.01A21.04 21.04 0 0 0 261.99 293 21.04 21.04 0 0 0 283 314.01 21.04 21.04 0 0 0 304.01 293 21.04 21.04 0 0 0 283 271.99zm-.38 8.29a2.97 2.97 0 1 1 0 5.93 2.97 2.97 0 0 1 0-5.93zm4.47 23.44h-8.18v-3.97h1.5V293h-1.48v-3.97h6.66v10.72h1.5z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-256 -266)">
+                        <use fill="#dc3531" xlink:href="#xsmea"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>снижение налога на недвижимость до 80%</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
-                  <defs>
-                    <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-671 -261)">
-                      <use fill="#dc3531" xlink:href="#5geoa"></use>
+                  </svg>
+                  <p>снижение налога на недвижимость до 80%</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
+                    <defs>
+                      <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-671 -261)">
+                        <use fill="#dc3531" xlink:href="#5geoa"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>гарантируем защиту ваших интересов в суде</p>
+                  </svg>
+                  <p>гарантируем защиту ваших интересов в суде</p>
+                </div>
               </div>
+              <form class="screen__form" action="#!" method="POST">
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+                </div>
+              </form>
             </div>
-            <form class="screen__form" action="#!" method="POST">
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
-              </div>
-            </form>
+            <div class="screen__img screen__img_2" style="background-image: url(static/img/bg/screen_img-2.png)"></div>
           </div>
-          <div class="screen__img screen__img_2" style="background-image: url(static/img/bg/screen_img-2.png)"></div>
+          <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
         </div>
-        <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
-      </div>
-      <div class="screen__item screen__item_3">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__title title-md">
-              <h2>СОПРОВОЖДЕНИЕ СДЕЛОК С НЕДВИЖИМОСТЬЮ!</h2>
+        <div class="screen__item screen__item_3">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__title title-md">
+                <h2>СОПРОВОЖДЕНИЕ СДЕЛОК С НЕДВИЖИМОСТЬЮ!</h2>
+              </div>
+              <div class="screen__info">
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="53" viewbox="0 0 46 53">
+                    <defs>
+                      <path id="b5aua" d="M301 1363.17v41c0 1-.84 1.83-1.86 1.83h-39.28a1.86 1.86 0 0 1-1.86-1.84v-41c0-1 .84-1.83 1.86-1.83h4.7c1.03 0 1.87.83 1.87 1.84 0 1.01-.84 1.84-1.86 1.84h-2.85v37.31h35.57v-37.31h-10a1.86 1.86 0 0 1-1.86-1.84v-3.5H273.6v6h9.64c1.02 0 1.86.83 1.86 1.84 0 1.01-.84 1.84-1.86 1.84h-11.5a1.86 1.86 0 0 1-1.87-1.84v-9.67c0-1.01.84-1.84 1.87-1.84h15.55c1.03 0 1.87.83 1.87 1.84v3.5h9.99c1.02 0 1.86.82 1.86 1.83zm-12.93 17.6l-10 9.79c-.36.36-.84.53-1.32.53-.48 0-.96-.18-1.32-.54l-4.49-4.46a1.82 1.82 0 0 1 .01-2.6 1.88 1.88 0 0 1 2.64 0l3.17 3.16 8.68-8.5a1.88 1.88 0 0 1 2.64.01c.72.73.72 1.89-.01 2.6z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-256 -1354)">
+                        <use fill="#dc3531" xlink:href="#b5aua"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>100% проверка документов по сделке</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewbox="0 0 42 42">
+                    <defs>
+                      <path id="p9n0a" d="M275.58 958.82L263.02 971l-7.82-7.8 2.66-2.66 4.96 4.98 9.68-9.86zM285 963a20 20 0 1 1-40 0 20 20 0 0 1 40 0zm-3.62 0a16.38 16.38 0 1 0-32.76 0 16.38 16.38 0 0 0 32.76 0z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-244 -942)">
+                        <use fill="#dc3531" xlink:href="#p9n0a"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>обеспечение юридической чистоты сделки</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
+                    <defs>
+                      <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-664 -1352)">
+                        <use fill="#dc3531" xlink:href="#ry2da"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>бесплатные устные консультации юриста-эксперта в сфере недвижимости</p>
+                </div>
+              </div>
+              <form class="screen__form" action="#!" method="POST">
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+                </div>
+              </form>
             </div>
-            <div class="screen__info">
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="53" viewbox="0 0 46 53">
-                  <defs>
-                    <path id="b5aua" d="M301 1363.17v41c0 1-.84 1.83-1.86 1.83h-39.28a1.86 1.86 0 0 1-1.86-1.84v-41c0-1 .84-1.83 1.86-1.83h4.7c1.03 0 1.87.83 1.87 1.84 0 1.01-.84 1.84-1.86 1.84h-2.85v37.31h35.57v-37.31h-10a1.86 1.86 0 0 1-1.86-1.84v-3.5H273.6v6h9.64c1.02 0 1.86.83 1.86 1.84 0 1.01-.84 1.84-1.86 1.84h-11.5a1.86 1.86 0 0 1-1.87-1.84v-9.67c0-1.01.84-1.84 1.87-1.84h15.55c1.03 0 1.87.83 1.87 1.84v3.5h9.99c1.02 0 1.86.82 1.86 1.83zm-12.93 17.6l-10 9.79c-.36.36-.84.53-1.32.53-.48 0-.96-.18-1.32-.54l-4.49-4.46a1.82 1.82 0 0 1 .01-2.6 1.88 1.88 0 0 1 2.64 0l3.17 3.16 8.68-8.5a1.88 1.88 0 0 1 2.64.01c.72.73.72 1.89-.01 2.6z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-256 -1354)">
-                      <use fill="#dc3531" xlink:href="#b5aua"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>100% проверка документов по сделке</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewbox="0 0 42 42">
-                  <defs>
-                    <path id="p9n0a" d="M275.58 958.82L263.02 971l-7.82-7.8 2.66-2.66 4.96 4.98 9.68-9.86zM285 963a20 20 0 1 1-40 0 20 20 0 0 1 40 0zm-3.62 0a16.38 16.38 0 1 0-32.76 0 16.38 16.38 0 0 0 32.76 0z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-244 -942)">
-                      <use fill="#dc3531" xlink:href="#p9n0a"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>обеспечение юридической чистоты сделки</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
-                  <defs>
-                    <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-664 -1352)">
-                      <use fill="#dc3531" xlink:href="#ry2da"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>бесплатные устные консультации юриста-эксперта в сфере недвижимости</p>
-              </div>
-            </div>
-            <form class="screen__form" action="#!" method="POST">
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
-              </div>
-            </form>
+            <div class="screen__img screen__img_3" style="background-image: url(static/img/bg/screen_img-3.png)"></div>
           </div>
-          <div class="screen__img screen__img_3" style="background-image: url(static/img/bg/screen_img-3.png)"></div>
+          <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
         </div>
-        <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
-      </div>
-      <div class="screen__item screen__item_4">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__title title-md">
-              <h2>ОФОРМЛЕНИЕ ПЕРЕПЛАНИРОВОК И РЕКОНСТРУКЦИЙ!</h2>
-            </div>
-            <div class="screen__info">
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewbox="0 0 43 43">
-                  <defs>
-                    <path id="rrn4a" d="M570 944.61v36.78c0 .89-.72 1.61-1.61 1.61H531.6c-.89 0-1.61-.72-1.61-1.61V944.6c0-.89.72-1.61 1.61-1.61h36.78c.89 0 1.61.72 1.61 1.61zm-3.22 1.61h-33.56v10.31h33.56zm-33.56 33.56h20.08v-8.7h-20.08zm20.08-20.03h-20.08v8.1h20.08zm13.48 20.03v-20.03h-10.26v20.03z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-528 -941)">
-                      <use fill="#dc3531" xlink:href="#rrn4a"></use>
+        <div class="screen__item screen__item_4">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__title title-md">
+                <h2>ОФОРМЛЕНИЕ ПЕРЕПЛАНИРОВОК И РЕКОНСТРУКЦИЙ!</h2>
+              </div>
+              <div class="screen__info">
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewbox="0 0 43 43">
+                    <defs>
+                      <path id="rrn4a" d="M570 944.61v36.78c0 .89-.72 1.61-1.61 1.61H531.6c-.89 0-1.61-.72-1.61-1.61V944.6c0-.89.72-1.61 1.61-1.61h36.78c.89 0 1.61.72 1.61 1.61zm-3.22 1.61h-33.56v10.31h33.56zm-33.56 33.56h20.08v-8.7h-20.08zm20.08-20.03h-20.08v8.1h20.08zm13.48 20.03v-20.03h-10.26v20.03z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-528 -941)">
+                        <use fill="#dc3531" xlink:href="#rrn4a"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>любые перепланировки и реконструкции подлежащие оформлению</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
-                  <defs>
-                    <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-664 -1352)">
-                      <use fill="#dc3531" xlink:href="#ry2da"></use>
+                  </svg>
+                  <p>любые перепланировки и реконструкции подлежащие оформлению</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
+                    <defs>
+                      <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-664 -1352)">
+                        <use fill="#dc3531" xlink:href="#ry2da"></use>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-                <p>бесплатныя предварительная консультация юриста</p>
+                  </svg>
+                  <p>бесплатныя предварительная консультация юриста</p>
+                </div>
               </div>
+              <form class="screen__form" action="#!" method="POST">
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+                </div>
+              </form>
             </div>
-            <form class="screen__form" action="#!" method="POST">
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
-              </div>
-            </form>
+            <div class="screen__img screen__img_4" style="background-image: url(static/img/bg/screen_img-4.png)"></div>
           </div>
-          <div class="screen__img screen__img_4" style="background-image: url(static/img/bg/screen_img-4.png)"></div>
+          <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
         </div>
-        <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg.jpg)"></div>
-      </div>
-      <div class="screen__item screen__item_5">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__title title-md">
-              <h2>АВТОЭКСПЕРТИЗА</h2>
+        <div class="screen__item screen__item_5">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__title title-md">
+                <h2>АВТОЭКСПЕРТИЗА</h2>
+              </div>
+              <div class="screen__info">
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="34" viewbox="0 0 43 34">
+                    <defs>
+                      <path id="nxs7a" d="M855 962.45v4.81c0 1.94-.91 3.67-2.33 4.78v2.4a3.55 3.55 0 0 1-3.53 3.56h-2.65a3.55 3.55 0 0 1-3.52-3.56v-1.15h-15.94v1.15a3.55 3.55 0 0 1-3.52 3.56h-2.65a3.55 3.55 0 0 1-3.53-3.56v-2.4a6.04 6.04 0 0 1-2.33-4.78v-4.81a6.04 6.04 0 0 1 3.35-5.42l-.62-.63a1.38 1.38 0 0 1 0-1.93 1.35 1.35 0 0 1 1.92 0l.63.64 1.23-4.95a4.3 4.3 0 0 1 4-3.16h18.97a4.3 4.3 0 0 1 4.01 3.16l1.23 4.95.63-.64a1.35 1.35 0 0 1 1.92 0c.53.53.53 1.4 0 1.93l-.62.63a6.04 6.04 0 0 1 3.35 5.42zm-32.12-6.13c.04.06.16.1.3.1h23.63c.15 0 .26-.04.31-.1.05-.06.06-.18.02-.32l-1.28-5.17a1.59 1.59 0 0 0-1.38-1.09h-18.96c-.57 0-1.25.53-1.38 1.09l-1.28 5.17c-.04.14-.03.26.02.32zm-5.17 10.94a3.28 3.28 0 0 0 3.26 3.29h28.06c1.8 0 3.26-1.48 3.26-3.29v-4.81a3.28 3.28 0 0 0-3.26-3.29h-28.06a3.28 3.28 0 0 0-3.26 3.29zm6.61 7.18v-1.15h-3.35c-.32 0-.63-.03-.93-.07v1.22c0 .44.37.82.82.82h2.65c.44 0 .81-.38.81-.82zm25.64 0v-1.22c-.3.04-.61.07-.93.07h-3.35v1.15c0 .44.37.82.81.82h2.65c.44 0 .82-.38.82-.82zm-20.98-9.59c0-.75.61-1.37 1.36-1.37h9.32c.75 0 1.36.62 1.36 1.37 0 .76-.61 1.37-1.36 1.37h-9.32c-.75 0-1.36-.6-1.36-1.37zm-9.32 0a3.71 3.71 0 0 1 3.69-3.72 3.71 3.71 0 0 1 3.68 3.72 3.71 3.71 0 0 1-3.68 3.73 3.71 3.71 0 0 1-3.69-3.73zm2.71 0c0 .55.44.99.98.99.53 0 .97-.44.97-.99a.98.98 0 0 0-.97-.98.98.98 0 0 0-.98.98zm20.6 0a3.71 3.71 0 0 1 3.68-3.72 3.71 3.71 0 0 1 3.69 3.72 3.71 3.71 0 0 1-3.69 3.73 3.71 3.71 0 0 1-3.68-3.73zm2.7 0c0 .55.45.99.98.99.54 0 .98-.44.98-.99a.98.98 0 0 0-.98-.98.98.98 0 0 0-.97.98z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-813 -945)">
+                        <use fill="#dc3531" xlink:href="#nxs7a"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>Независмая оценка стоимости восстановительного ремонта</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
+                    <defs>
+                      <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-671 -261)">
+                        <use fill="#dc3531" xlink:href="#5geoa"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>Экспертиза обстоятельств ДТП</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
+                    <defs>
+                      <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-664 -1352)">
+                        <use fill="#dc3531" xlink:href="#ry2da"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>Бесплатная консультация эксперта-техника</p>
+                </div>
+                <div class="screen__info-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewbox="0 0 42 42">
+                    <defs>
+                      <path id="p9n0a" d="M275.58 958.82L263.02 971l-7.82-7.8 2.66-2.66 4.96 4.98 9.68-9.86zM285 963a20 20 0 1 1-40 0 20 20 0 0 1 40 0zm-3.62 0a16.38 16.38 0 1 0-32.76 0 16.38 16.38 0 0 0 32.76 0z"></path>
+                    </defs>
+                    <g>
+                      <g transform="translate(-244 -942)">
+                        <use fill="#dc3531" xlink:href="#p9n0a"></use>
+                      </g>
+                    </g>
+                  </svg>
+                  <p>Гарантированная защита экспертизы в суде</p>
+                </div>
+              </div>
+              <form class="screen__form" action="#!" method="POST">
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
+                </div>
+                <div class="screen__form-field">
+                  <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+                </div>
+              </form>
             </div>
-            <div class="screen__info">
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="34" viewbox="0 0 43 34">
-                  <defs>
-                    <path id="nxs7a" d="M855 962.45v4.81c0 1.94-.91 3.67-2.33 4.78v2.4a3.55 3.55 0 0 1-3.53 3.56h-2.65a3.55 3.55 0 0 1-3.52-3.56v-1.15h-15.94v1.15a3.55 3.55 0 0 1-3.52 3.56h-2.65a3.55 3.55 0 0 1-3.53-3.56v-2.4a6.04 6.04 0 0 1-2.33-4.78v-4.81a6.04 6.04 0 0 1 3.35-5.42l-.62-.63a1.38 1.38 0 0 1 0-1.93 1.35 1.35 0 0 1 1.92 0l.63.64 1.23-4.95a4.3 4.3 0 0 1 4-3.16h18.97a4.3 4.3 0 0 1 4.01 3.16l1.23 4.95.63-.64a1.35 1.35 0 0 1 1.92 0c.53.53.53 1.4 0 1.93l-.62.63a6.04 6.04 0 0 1 3.35 5.42zm-32.12-6.13c.04.06.16.1.3.1h23.63c.15 0 .26-.04.31-.1.05-.06.06-.18.02-.32l-1.28-5.17a1.59 1.59 0 0 0-1.38-1.09h-18.96c-.57 0-1.25.53-1.38 1.09l-1.28 5.17c-.04.14-.03.26.02.32zm-5.17 10.94a3.28 3.28 0 0 0 3.26 3.29h28.06c1.8 0 3.26-1.48 3.26-3.29v-4.81a3.28 3.28 0 0 0-3.26-3.29h-28.06a3.28 3.28 0 0 0-3.26 3.29zm6.61 7.18v-1.15h-3.35c-.32 0-.63-.03-.93-.07v1.22c0 .44.37.82.82.82h2.65c.44 0 .81-.38.81-.82zm25.64 0v-1.22c-.3.04-.61.07-.93.07h-3.35v1.15c0 .44.37.82.81.82h2.65c.44 0 .82-.38.82-.82zm-20.98-9.59c0-.75.61-1.37 1.36-1.37h9.32c.75 0 1.36.62 1.36 1.37 0 .76-.61 1.37-1.36 1.37h-9.32c-.75 0-1.36-.6-1.36-1.37zm-9.32 0a3.71 3.71 0 0 1 3.69-3.72 3.71 3.71 0 0 1 3.68 3.72 3.71 3.71 0 0 1-3.68 3.73 3.71 3.71 0 0 1-3.69-3.73zm2.71 0c0 .55.44.99.98.99.53 0 .97-.44.97-.99a.98.98 0 0 0-.97-.98.98.98 0 0 0-.98.98zm20.6 0a3.71 3.71 0 0 1 3.68-3.72 3.71 3.71 0 0 1 3.69 3.72 3.71 3.71 0 0 1-3.69 3.73 3.71 3.71 0 0 1-3.68-3.73zm2.7 0c0 .55.45.99.98.99.54 0 .98-.44.98-.99a.98.98 0 0 0-.98-.98.98.98 0 0 0-.97.98z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-813 -945)">
-                      <use fill="#dc3531" xlink:href="#nxs7a"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>Независмая оценка стоимости восстановительного ремонта</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewbox="0 0 53 53">
-                  <defs>
-                    <path id="5geoa" d="M713.5 289.7v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-22.67v-1.6a2.08 2.08 0 1 0-4.16 0v1.6h-5.35v-13.91h41.67v13.9zm-36.34 4.17h5.34v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h22.66v1.6a2.08 2.08 0 1 0 4.16 0v-1.6h5.34v14.98h-41.66zm26.8-26.7v4.26H690.5v-4.27zm4.16 4.44v-5.31a3.3 3.3 0 0 0-3.3-3.3h-15.18a3.3 3.3 0 0 0-3.3 3.3v5.31h-11.26c-1.15 0-2.08.93-2.08 2.09v37.22c0 1.15.93 2.08 2.08 2.08h45.84c1.15 0 2.08-.93 2.08-2.08V273.7c0-1.15-.93-2.09-2.08-2.09z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-671 -261)">
-                      <use fill="#dc3531" xlink:href="#5geoa"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>Экспертиза обстоятельств ДТП</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="53" viewbox="0 0 49 53">
-                  <defs>
-                    <path id="ry2da" d="M708.52 1373.5v2.1a5.05 5.05 0 0 1 3.48 4.8v7.29c0 2.27-1.5 4.19-3.57 4.82a10.11 10.11 0 0 1-10 8.74h-3.26a4.78 4.78 0 0 1-4.32 2.75H689a4.77 4.77 0 0 1 0-9.53h1.85c2.16 0 4 1.45 4.58 3.42h3c3.17 0 5.83-2.2 6.54-5.16h-.04a1.68 1.68 0 0 1-1.57 1.07h-5.95c-.92 0-1.68-.75-1.68-1.68v-16.2c0-.93.76-1.68 1.68-1.68h5.95c.73 0 1.36.46 1.59 1.12h.2v-1.85a16.17 16.17 0 0 0-32.3-.06v1.9h.26c.23-.65.85-1.11 1.59-1.11h5.89c.92 0 1.68.75 1.68 1.68v16.25a1.68 1.68 0 0 1-1.68 1.68h-.02l-5.9-.05c-.7 0-1.3-.45-1.54-1.07h-2.08a5.05 5.05 0 0 1-5.05-5.04v-7.29a5.05 5.05 0 0 1 3.48-4.8v-2.15A19.5 19.5 0 0 1 689 1354a19.54 19.54 0 0 1 19.52 19.5zm-1.57 15.87c.93 0 1.68-.75 1.68-1.68v-7.29c0-.93-.75-1.68-1.68-1.68h-1.9v10.65zm-35.9-10.65c-.93 0-1.68.75-1.68 1.68v7.29c0 .92.75 1.68 1.68 1.68H673v-10.65zm21.2 20.52c0-.75-.65-1.4-1.4-1.4H689c-.75 0-1.4.65-1.4 1.4 0 .74.65 1.4 1.4 1.4h1.85c.79 0 1.4-.62 1.4-1.4zm-13.35-21.64h-2.52v12.85l2.52.02zm22.78 0h-2.58v12.83h2.58z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-664 -1352)">
-                      <use fill="#dc3531" xlink:href="#ry2da"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>Бесплатная консультация эксперта-техника</p>
-              </div>
-              <div class="screen__info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewbox="0 0 42 42">
-                  <defs>
-                    <path id="p9n0a" d="M275.58 958.82L263.02 971l-7.82-7.8 2.66-2.66 4.96 4.98 9.68-9.86zM285 963a20 20 0 1 1-40 0 20 20 0 0 1 40 0zm-3.62 0a16.38 16.38 0 1 0-32.76 0 16.38 16.38 0 0 0 32.76 0z"></path>
-                  </defs>
-                  <g>
-                    <g transform="translate(-244 -942)">
-                      <use fill="#dc3531" xlink:href="#p9n0a"></use>
-                    </g>
-                  </g>
-                </svg>
-                <p>Гарантированная защита экспертизы в суде</p>
-              </div>
-            </div>
-            <form class="screen__form" action="#!" method="POST">
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Ваше имя" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-input form-input" type="text" placeholder="Номер телефона" name="" required="required" />
-              </div>
-              <div class="screen__form-field">
-                <input class="screen__form-submit form-submit btn btn_red" type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
-              </div>
-            </form>
+            <div class="screen__img screen__img_5" style="background-image: url(static/img/bg/screen_img-5.png)"></div>
           </div>
-          <div class="screen__img screen__img_5" style="background-image: url(static/img/bg/screen_img-5.png)"></div>
+          <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg-2.jpg)"></div>
         </div>
-        <div class="screen__bg" style="background-image: url(static/img/bg/screen_bg-2.jpg)"></div>
       </div>
     </section>
     <!--end screen-->
     <!--begin services-->
     <section class="services">
-      <div class="services__container container">
+      <div class="services__container container js-tabs">
+        <div class="services__mob-nav">
+          <button class="services__mob-nav-btn js-tabs-nav" type="button">Для юр. лиц</button>
+          <button class="services__mob-nav-btn js-tabs-nav" type="button">Для физ. лиц</button>
+        </div>
         <div class="services__row">
-          <div class="services__col">
-            <div class="services__title">
+          <div class="services__col js-tabs-item">
+            <div class="services__title" data-anim="fade-y">
               <h3>Услуги для юр. лиц</h3>
             </div>
-            <div class="services__sub-col">
+            <div class="services__sub-col" data-anim-stagger="fade-y">
               <div class="services__item">
                 <div class="services__item-title">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewbox="0 0 42 42">
@@ -544,12 +560,14 @@
                   </svg>
                   <h4>Регистрация:</h4>
                 </div>
-                <a class="link-decor" href="#!">
-                  <span>Регистрация ООО</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Регистрация ИП</span>
-                </a>
+                <div class="services__item-links">
+                  <a class="link-decor" href="#!">
+                    <span>Регистрация ООО</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Регистрация ИП</span>
+                  </a>
+                </div>
               </div>
               <div class="services__item">
                 <div class="services__item-title">
@@ -582,7 +600,7 @@
                 </div>
               </div>
             </div>
-            <div class="services__sub-col">
+            <div class="services__sub-col" data-anim-stagger="fade-y">
               <div class="services__item">
                 <div class="services__item-title">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewbox="0 0 43 43">
@@ -597,26 +615,28 @@
                   </svg>
                   <h4>Кадастровая оценка:</h4>
                 </div>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Оспаривание кад. стоимости</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка квартир</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка земельных участков</span>
-                </a>
+                <div class="services__item-links">
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Оспаривание кад. стоимости</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка квартир</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка земельных участков</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="services__col">
-            <div class="services__title">
+          <div class="services__col js-tabs-item">
+            <div class="services__title" data-anim="fade-y">
               <h3>Услуги для физ. лиц</h3>
             </div>
-            <div class="services__sub-col">
+            <div class="services__sub-col" data-anim-stagger="fade-y">
               <div class="services__item">
                 <div class="services__item-title">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="34" viewbox="0 0 43 34">
@@ -631,12 +651,14 @@
                   </svg>
                   <h4>Атвоэкспертиза:</h4>
                 </div>
-                <a class="link-decor" href="#!">
-                  <span>Экспертиза кузовного ремонта</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Экспертиза атвомобиля</span>
-                </a>
+                <div class="services__item-links">
+                  <a class="link-decor" href="#!">
+                    <span>Экспертиза кузовного ремонта</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Экспертиза атвомобиля</span>
+                  </a>
+                </div>
               </div>
               <div class="services__item">
                 <div class="services__item-title">
@@ -669,7 +691,7 @@
                 </div>
               </div>
             </div>
-            <div class="services__sub-col">
+            <div class="services__sub-col" data-anim-stagger="fade-y">
               <div class="services__item">
                 <div class="services__item-title">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewbox="0 0 43 43">
@@ -684,18 +706,20 @@
                   </svg>
                   <h4>Кадастровая оценка:</h4>
                 </div>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Оспаривание кад. стоимости</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка квартир</span>
-                </a>
-                <a class="link-decor" href="#!">
-                  <span>Кадастровая оценка земельных участков</span>
-                </a>
+                <div class="services__item-links">
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Оспаривание кад. стоимости</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка квартир</span>
+                  </a>
+                  <a class="link-decor" href="#!">
+                    <span>Кадастровая оценка земельных участков</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -713,25 +737,25 @@
             </div>
             <div class="about__info-row">
               <div class="about__item">
-                <div class="about__item-count">97</div>
+                <div class="about__item-count" data-anim-count="97">97</div>
                 <div class="about__item-text">
                   <p>Довольных клиентов</p>
                 </div>
               </div>
               <div class="about__item">
-                <div class="about__item-count">13</div>
+                <div class="about__item-count" data-anim-count="13">13</div>
                 <div class="about__item-text">
                   <p>Существует наша команда</p>
                 </div>
               </div>
               <div class="about__item">
-                <div class="about__item-count">568</div>
+                <div class="about__item-count" data-anim-count="568">568</div>
                 <div class="about__item-text">
                   <p>Выигранных дел</p>
                 </div>
               </div>
               <div class="about__item">
-                <div class="about__item-count">655</div>
+                <div class="about__item-count" data-anim-count="655">655</div>
                 <div class="about__item-text">
                   <p>Успешных дел</p>
                 </div>
@@ -747,199 +771,206 @@
             <a class="about__info-btn btn btn_red" href="#!">читать подробнее</a>
           </div>
           <div class="about__events">
-            <div class="about__events-title title-md">
-              <h2>События</h2>
-            </div>
-            <div class="about__events-item">
-              <div class="about__events-item-date">
-                <span>20.02.2018</span>
+            <div class="about__events-inner">
+              <div class="about__events-title title-md">
+                <h2>События</h2>
               </div>
-              <a class="about__events-decor-link link-decor" href="#!">
-                <span>Перечень вопросов для проведения единого квалификационного экзамена в области законодательства Российской Федерации об оценочной деятельности.</span>
-              </a>
-            </div>
-            <div class="about__events-item">
-              <div class="about__events-item-date">
-                <span>20.02.2018</span>
+              <div class="about__events-item">
+                <div class="about__events-item-date">
+                  <span>20.02.2018</span>
+                </div>
+                <a class="about__events-decor-link link-decor" href="#!">
+                  <span>Перечень вопросов для проведения единого квалификационного экзамена в области законодательства Российской Федерации об оценочной деятельности.</span>
+                </a>
               </div>
-              <a class="about__events-decor-link link-decor" href="#!">
-                <span>В Саратовской области Прокуратурой проведена проверка соблюдения законодательства об оценочной деятельности</span>
-              </a>
-            </div>
-            <div class="about__events-item">
-              <div class="about__events-item-date">
-                <span>20.02.2018</span>
+              <div class="about__events-item">
+                <div class="about__events-item-date">
+                  <span>20.02.2018</span>
+                </div>
+                <a class="about__events-decor-link link-decor" href="#!">
+                  <span>В Саратовской области Прокуратурой проведена проверка соблюдения законодательства об оценочной деятельности</span>
+                </a>
               </div>
-              <a class="about__events-decor-link link-decor" href="#!">
-                <span>Перечень вопросов для проведения единого квалификационного экзамена в области законодательства Российской Федерации об оценочной деятельности.</span>
-              </a>
-            </div>
-            <div class="about__events-item">
-              <div class="about__events-item-date">
-                <span>20.02.2018</span>
+              <div class="about__events-item">
+                <div class="about__events-item-date">
+                  <span>20.02.2018</span>
+                </div>
+                <a class="about__events-decor-link link-decor" href="#!">
+                  <span>Перечень вопросов для проведения единого квалификационного экзамена в области законодательства Российской Федерации об оценочной деятельности.</span>
+                </a>
               </div>
-              <a class="about__events-decor-link link-decor" href="#!">
-                <span>В Саратовской области Прокуратурой проведена проверка соблюдения законодательства об оценочной деятельности</span>
-              </a>
+              <div class="about__events-item">
+                <div class="about__events-item-date">
+                  <span>20.02.2018</span>
+                </div>
+                <a class="about__events-decor-link link-decor" href="#!">
+                  <span>В Саратовской области Прокуратурой проведена проверка соблюдения законодательства об оценочной деятельности</span>
+                </a>
+              </div>
             </div>
+            <div class="about__events-mask"></div>
           </div>
         </div>
       </div>
       <div class="about__video">
-        <div class="about__container container">
+        <div class="container">
           <div class="about__row">
-            <div class="about__video-col">
+            <div class="about__video-col" data-anim="fade-x">
               <iframe width="540" height="303" src="https://www.youtube.com/embed/eXDU9um19HM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
             </div>
-            <div class="about__video-col">
+            <div class="about__video-col" data-anim="fade-x">
               <p>Юридическая компания
                 <strong>«Технология Управления»</strong> уже более 13-ти лет оказывает квалифицированную правовую поддержку и юридические услуги для граждан и юридических лиц.
                 <i>Наши специалисты являются профессионалами своего дела, получившими высшее образование по специальности "Юриспруденция" в лучших вузах страны.</i>
               </p>
               <p>Сотрудники компании имеют огромный опыт ведения дел в судах и всегда настроены на поиск оптимального решения и выходы из сложной ситуации в интересах клиента. Основой нашей успешной юридической практики является отличное знание законов,
                 большая положительная судебная практика и работа строго в интересах клиента (доверителя). Вы можете обращаться за юридической помощью вне зависимости от ситуации: будь то разовая услуга, бесплатная консультация или комплексное юридическое
-                сопровождения Вашего бизнеса. Мы оказываем полный спектр юридических услуг в Самаре во всех сферах права.</p>
+                сопровождения Вашего бизнеса.</p>
             </div>
           </div>
         </div>
+        <div class="particles" id="js-gray-particles"></div>
       </div>
       <!--end about-->
-      <!--begin clients-->
-      <section class="clients">
-        <div class="clients__title title-md">
-          <h2>Наши клиенты</h2>
-        </div>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-        <a class="clients__logo" href="#!">
-          <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
-          <img src="static/img/content/client-logo.png" alt="image" title="" />
-        </a>
-      </section>
-      <!--end clients-->
-      <!--begin testimonials-->
-      <section class="testimonials">
-        <div class="testimonials__container container">
-          <div class="testimonials__title title-md">
-            <h2>Отзывы о нашей компании</h2>
-          </div>
-          <div class="testimonials__inner">
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-            <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
-              <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
-            </a>
-          </div>
-        </div>
-      </section>
-      <!--end testimonials-->
     </section>
+    <!--begin clients-->
+    <section class="clients" data-anim-stagger="fade-y" data-anim-duration=".1" data-stagger-delay="0.1">
+      <div class="clients__title title-md">
+        <h2>Наши клиенты</h2>
+      </div>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+      <a class="clients__logo" href="#!">
+        <img src="static/img/content/client-logo_hover.png" alt="image" title="" />
+        <img src="static/img/content/client-logo.png" alt="image" title="" />
+      </a>
+    </section>
+    <!--end clients-->
+    <!--begin testimonials-->
+    <section class="testimonials">
+      <div class="testimonials__container container">
+        <div class="testimonials__title title-md" data-anim="fade-y">
+          <h2>Отзывы о нашей компании</h2>
+        </div>
+        <div class="testimonials__inner" data-anim="fade-y" data-anim-delay="0.5">
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+          <a class="testimonials__item" data-fancybox="testimonials" href="static/img/content/testimonial-img_lg.jpg">
+            <img src="static/img/content/testimonial-img.jpg" alt="image" title="" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--end testimonials-->
+    <!--begin contact-map-->
+    <!--+b.SECTION.contact-map#contact-map(data-anim='fade-y' data-anim-duration='1')-->
+    <!--end contact-map-->
     <!-- Popups-->
     <div class="popup js-popup">
       <div class="change-city">
@@ -976,10 +1007,93 @@
     </div>
     <!--begin footer-->
     <footer class="footer" data-anim="fade-y" data-anim-duration="1">
-      <div class="footer__container container"></div>
+      <div class="footer__container container">
+        <div class="footer__row">
+          <div class="footer__col">
+            <a class="footer__logo logo" href="#!">
+              <img src="static/img/other/logo.png" alt="Технология управления" title="" />
+            </a>
+          </div>
+          <div class="footer__col address-block">
+            <button class="address-block__btn btn js-popup-btn" type="button">
+              <span>Самара</span>
+              <svg class="address-block__btn-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="14" viewbox="0 0 12 14">
+                <defs>
+                  <path id="7zrna" d="M634 118.2l-1.2-1.24-2.92 2.88V113l-1.76.02v6.8l-2.94-2.84-1.18 1.2 5 4.82z"></path>
+                </defs>
+                <g>
+                  <g transform="translate(-623 -111)">
+                    <use fill="#fff" xlink:href="#7zrna"></use>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <div class="address-block__text">
+              <p>Московское шоссе д. 3 офисы: 301Б, 302, 309</p>
+            </div>
+          </div>
+          <div class="footer__col tel-block">
+            <p>Наши телефоны:</p>
+            <a href="tel:+78462767888">
+              <span>+7 (846)</span> 27-67-888</a>
+            <a href="tel:+78462766888">
+              <span>+7 (846)</span> 27-66-888</a>
+          </div>
+          <div class="footer__col">
+            <div class="socials footer__socials">
+              <a href="#!" target="_blank">
+                <svg class="icon icon-fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" viewbox="0 0 10 19">
+                  <defs>
+                    <path id="s8tca" d="M1214.7 5734h-1.92c-2.16 0-3.55 1.55-3.55 3.94v1.81h-1.93c-.16 0-.3.15-.3.33v2.63c0 .18.14.33.3.33h1.93v6.63c0 .18.14.33.3.33h2.52c.17 0 .3-.15.3-.33v-6.63h2.26c.16 0 .3-.15.3-.33v-2.63a.34.34 0 0 0-.09-.23.29.29 0 0 0-.21-.1h-2.26v-1.54c0-.74.16-1.11 1.06-1.11h1.29c.16 0 .3-.15.3-.33v-2.44c0-.18-.13-.33-.3-.33z"></path>
+                  </defs>
+                  <g>
+                    <g transform="translate(-1206 -5732)">
+                      <use xlink:href="#s8tca"></use>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#!" target="_blank">
+                <svg class="icon icon-tw" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                  <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411      c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513      c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101      c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104      c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194      c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485      c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path>
+                </svg>
+              </a>
+              <a href="#!" target="_blank">
+                <svg class="icon icon-vk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="13" viewbox="0 0 19 13">
+                  <defs>
+                    <path id="i7tka" d="M1255.05 5743.72c.53.52 1.1 1 1.57 1.57.2.25.4.51.56.8.22.42.02.88-.35.9h-2.34a1.8 1.8 0 0 1-1.48-.6c-.32-.33-.62-.67-.93-1.01a2.2 2.2 0 0 0-.42-.37c-.32-.2-.6-.14-.78.19-.18.33-.22.7-.24 1.08-.03.54-.2.69-.74.71a5.99 5.99 0 0 1-3.34-.71 7.35 7.35 0 0 1-2.24-2.1 28.08 28.08 0 0 1-2.96-5.22c-.18-.42-.05-.64.41-.65h2.28c.31 0 .52.18.63.47.42 1 .92 1.97 1.55 2.85.17.24.34.47.59.64.27.19.47.12.6-.18.08-.18.12-.39.13-.6.06-.7.07-1.39-.03-2.09-.07-.43-.32-.71-.75-.8-.22-.04-.2-.12-.08-.25.18-.21.36-.35.71-.35h2.64c.41.08.5.27.56.68v2.91c0 .16.08.64.37.74.24.08.39-.1.53-.25a9.02 9.02 0 0 0 1.48-2.27c.18-.36.33-.73.48-1.1.11-.28.29-.41.6-.4h2.53l.23.01c.43.07.54.25.41.67-.2.65-.61 1.2-1 1.74-.43.58-.88 1.14-1.3 1.73-.39.53-.36.8.12 1.26z"></path>
+                  </defs>
+                  <g>
+                    <g transform="translate(-1240 -5736)">
+                      <use xlink:href="#i7tka"></use>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#!" target="_blank">
+                <svg class="icon icon-gp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="12" viewbox="0 0 19 12">
+                  <defs>
+                    <path id="8fyka" d="M1339 5741.92v1.18c0 .18-.17.33-.38.33h-1v.87c0 .18-.18.33-.39.33h-1.35c-.21 0-.39-.15-.39-.33v-.87h-1c-.21 0-.38-.15-.38-.33v-1.18c0-.18.17-.33.38-.33h1v-.87c0-.18.18-.33.39-.33h1.35c.21 0 .38.15.38.33v.87h1c.22 0 .39.15.39.33zm-12.66-1.11a2.22 2.22 0 0 0-.02 3.36c.49.43 1.18.68 1.92.68.71 0 1.38-.24 1.82-.66.2-.2.37-.4.47-.6h-2.24c-.21 0-.38-.14-.38-.33v-1.32c0-.18.17-.33.38-.33h4.4c.19 0 .35.12.38.28l.05.3v.99a4 4 0 0 1-1.26 2.52c-.9.83-2.21 1.3-3.62 1.3a5.76 5.76 0 0 1-3.75-1.32 4.18 4.18 0 0 1-1.49-3.21 4.2 4.2 0 0 1 1.54-3.2 5.57 5.57 0 0 1 3.61-1.27 5.9 5.9 0 0 1 1.94.33l.71.3.05.02.73.44c.1.06.16.15.17.24a.3.3 0 0 1-.11.27l-1.26 1.08a.43.43 0 0 1-.49.04l-.43-.26a2.84 2.84 0 0 0-3.12.35z"></path>
+                  </defs>
+                  <g>
+                    <g transform="translate(-1321 -5736)">
+                      <use xlink:href="#8fyka"></use>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <a class="footer__btn btn btn_red-line" href="#!">Заказать звонок</a>
+            <a class="footer__btn btn btn_grey-line" href="#!">Задать вопрос</a>
+          </div>
+        </div>
+      </div>
     </footer>
     <!--end footer-->
     <!-- Scripts-->
+    <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")-->
     <script src="static/js/jquery-3.3.1.min.js"></script>
     <script src="static/js/index.js"></script>
   </body>

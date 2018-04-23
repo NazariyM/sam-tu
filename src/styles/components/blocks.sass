@@ -1,40 +1,81 @@
 .address-block
    p
       +f('pm-400', 16, 25)
+      +xs
+         font-size: 15px
+         line-height: 20px
+      
       strong
          +f('pm-600')
+      &:nth-child(2)
+         +xs
+            display: none
          
    &__btn
-      padding: 9px 25px 7px
+      margin-bottom: 4px
+      padding: 9px 19px 7px 22px
       min-width: 0
       +f('pml-400', 16)
       color: #fff
       text-transform: none
       background: #dc3531
+      +xs
+         display: flex
+         margin-bottom: 0
+         background: transparent
+         padding: 0
+         color: #dc3531
+         font-size: 15px
+         line-height: 20px
+      
+      span
+         +xs
+            border-bottom: 1px solid rgba(#dc3531, .5)
+         
       svg
          vertical-align: -2px
-         margin-left: 5px
+         margin-left: 8px
          transition: .3s ease
          
       .no-touch &:hover svg
          transform: scaleY(-1)
       .no-touch &:hover
          background: darken(#dc3531, 8)
+         
+   &__mob-text
+      display: none
+      margin-right: 4px
+      color: #20201f
+      border-bottom: 0!important
+      +xs
+         display: block
 
 .tel-block
    display: flex
    flex-direction: column
    p
-      margin-bottom: 5px
+      margin-bottom: 8px
       color: #88898a
       +f('pm-400')
+      +xs
+         display: none
       
    a
       +f('pm-600', 25, 25)
+      +trs
+      +sm
+         font-size: 20px
+      +xs
+         font-size: 14px
+         
+      .no-touch &:hover
+         color: $color2
       &:not(:last-child)
-         margin-bottom: 5px
+         margin-bottom: 6px
       span
          font-size: 20px
+         +xs
+            font-size: 14px
          
 .change-city
    padding: 10px
@@ -45,12 +86,18 @@
       text-align: center
    &__list
       display: flex
+      +xs
+         flex-direction: column
    &__item
       flex: 0 1 33.333333%
       margin: 0 15px
       text-align: center
+      min-width: 150px
       &-img
          margin-bottom: 10px
+         +xs
+            width: 100px
+            margin: 0 auto 10px
       &-title
          +f('pm-400', 20)
          +trs
@@ -83,12 +130,25 @@
       justify-content: center
       width: 40px
       cursor: pointer
+      svg
+         position: relative
+         right: 5px
+      
       
    input[type='submit']
       display: none
       
 .popup
    display: none
+   cursor: default!important
+   
+.logo
+   display: block
+   margin-top: -5px
+   margin-left: -7px
+   max-width: 174px
+   max-height: 98px
+   +cover-img
    
 .form-input
    width: 100%
@@ -105,3 +165,12 @@
    
 .form-submit
    border-radius: 25px!important
+   
+.particles
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   bottom: 0
+   z-index: 1
+   pointer-events: none

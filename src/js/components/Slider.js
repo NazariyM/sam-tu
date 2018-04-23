@@ -70,7 +70,7 @@ class Slider {
   }
 
   createSlider () {
-    const $screen = $('.screen');
+    const $screen = $('.screen__slider');
     const $testimonialsSld = $('.testimonials__inner');
 
     const defaultOptions = {
@@ -95,12 +95,29 @@ class Slider {
       speed: 800,
       autoplay: true,
       fade: true,
-      autoplaySpeed: 2500
+      autoplaySpeed: 2500,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          arrows: true
+        }
+      }]
     }));
 
     $testimonialsSld.slick($.extend({}, defaultOptions, {
       slidesToShow: 6,
       slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 5
+        }
+      }, {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 4
+        }
+      }]
     }));
   }
 }

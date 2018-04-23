@@ -1,26 +1,49 @@
 // begin screen //
 .screen
-   display: none
-   &.slick-initialized
-      display: block
+   height: 500px
+   transform: translateY(50px)
+   +sm
+      height: 400px
+   +xs
+      height: 308px
+   &__slider
+      display: none
+      &.slick-initialized
+         display: block
    &__item
       position: relative
       height: 500px
       background: #f1f5f9
+      overflow: hidden
+      +sm
+         height: 400px
+      +xs
+         height: 308px
+         
       &_1
+         .screen__info
+            +sm
+               max-width: 580px
          .screen__info-item
+            &:nth-child(1)
+               max-width: 422px
             &:nth-child(2)
+               max-width: 245px
                flex: 0 0 245px
          
       &_2
          .screen__title
             max-width: 530px
+            +xs
+               max-width: 200px
          .screen__info
             max-width: 550px
          
       &_3
          .screen__title
             max-width: 500px
+            +xs
+               max-width: 200px
          .screen__inner
             max-width: 710px
          .screen__info-item
@@ -30,11 +53,17 @@
       &_4
          .screen__title
             max-width: 620px
+            +sm
+               max-width: 600px
+   
          .screen__inner
             max-width: 700px
          .screen__info-item
             &:nth-child(1)
+               max-width: 400px
                flex: 0 0 400px
+            &:nth-child(2)
+               max-width: 317px
                
       &_5
          .screen__info
@@ -42,8 +71,10 @@
             flex-wrap: wrap
          .screen__info-item
             flex: 0 0 50%
+            max-width: 313.5px
             margin-bottom: 15px
             &:nth-child(2n)
+               max-width: 282px
                flex: 0 0 45%
                
          .screen__form
@@ -55,6 +86,9 @@
       height: 100%
       display: flex
       align-items: center
+      +xs
+         align-items: flex-start
+         justify-content: center
       
    &__inner
       position: relative
@@ -65,15 +99,12 @@
       display: flex
       margin: 0 -15px 30px
       padding-left: 13px
+      +xs
+         display: none
       &-item
          display: flex
          align-items: center
          padding: 0 15px
-         &_1
-            flex: 1 1 382px
-         &_2
-            flex: 1 1 225px
-            
          svg
             flex-shrink: 0
             margin-right: 10px
@@ -83,6 +114,8 @@
             
    &__form
       display: flex
+      +xs
+         display: none
       &-field
          flex: 0 0 210px
          padding: 0 5px
@@ -96,7 +129,18 @@
       font-size: 35px
       padding-left: 12px
       +f('pm-700')
-      
+      +xs
+         display: flex
+         flex-direction: column
+         justify-content: center
+         max-width: 200px
+         height: 70px
+         margin: 25px auto 0
+         padding-left: 0
+         text-align: center
+         font-size: 20px
+         line-height: 22px
+         
    &__img
       position: absolute
       top: 0
@@ -104,82 +148,213 @@
       z-index: 2
       +cover
       &_1
-         right: -132px
+         right: -117px
          width: 747px
          height: 500px
-         
+         +md
+            right: -250px
+         +sm
+            right: -265px
+            width: 600px
+            height: 400px
+         +xs
+            right: 50%
+            width: 460px
+            height: 308px
+            margin-right: -112px
+   
       &_2
          top: 24px
-         right: -109px
+         right: -94px
          width: 703px
          height: 444px
-         
+         +sm
+            top: 94px
+            right: -100px
+            width: 430px
+            height: 274px
+         +xs
+            top: 105px
+            width: 350px
+            height: 224px
+            right: 50%
+            margin-right: -175px
       &_3
-         right: 26px
+         right: 41px
          top: 14px
          width: 417px
          height: 486px
+         +sm
+            right: 0
+            top: 14px
+            width: 323px
+            height: 390px
+         +xs
+            right: 50%
+            margin-right: -91px
+            top: 98px
+            width: 183px
+            height: 210px
          
       &_4
          top: 33px
          right: 8px
          width: 380px
          height: 427px
+         +sm
+            top: 13px
+            right: 42px
+            width: 170px
+            height: 195px
+         +xs
+            top: 103px
+            right: 50%
+            margin-right: -85px
       &_5
          top: 26px
          right: 20px
          width: 391px
          height: 474px
+         +sm
+            top: 60px
+            right: -40px
+            width: 282px
+            height: 344px
+         +xs
+            top: 83px
+            right: 50%
+            margin-right: -92.5px
+            width: 185px
+            height: 227px
    
    &__bg
       +coverdiv
       +cover
       opacity: .15
+   
+   .slider__btn_next
+      top: 62px
+      right: 20px
+      
+   .slider__btn_prev
+      top: 62px
+      left: 20px
 
 // end screen //
 
 // begin services //
 .services
-   padding: 70px 0
+   padding: 85px 0
+   +xs
+      padding: 25px 0
+   &__mob-nav
+      display: none
+      justify-content: center
+      margin: 0 -15px
+      padding: 15px 0
+      border-bottom: 1px solid #f1f5f9
+      +xs
+         display: flex
+      &-btn
+         min-width: 147px
+         padding: 0 10px
+         height: 40px
+         +f('pm-700', 16)
+         line-height: 42px
+         border-radius: 20px
+         +trs
+         text-transform: uppercase
+         &.is-active
+            pointer-events: none
+            color: #fff
+            background-color: #dc3531
+         
    &__row
       display: flex
       margin: 0 -15px
-      
+      +sm
+         flex-direction: column
+      +xs
+         padding: 20px 0 0
+   
    &__col
       flex: 0 1 50%
       padding: 0 15px
+      +sm
+         &:not(:last-child)
+            margin-bottom: 50px
+         
+      +xs
+         &:not(:last-child)
+            margin-bottom: 0
+      +xs
+         display: none
    
    &__sub-col
       float: left
       width: 50%
+      +xs
+         float: none
+         width: 100%
+         
       &:nth-child(2)
          padding-right: 15px
+         +xs
+            padding: 0 0 20px
       &:nth-child(3)
          padding-left: 15px
+         +xs
+            padding: 0
    
    &__title
-      margin-bottom: 35px
+      margin-bottom: 30px
       +f('pm-100')
       font-size: 38px
       line-height: 40px
-      
+      +sm
+         text-align: center
+      +xs
+         display: none
+         
    &__item
       display: flex
       flex-direction: column
       align-items: flex-start
       &:not(:last-child)
-         margin-bottom: 15px
+         margin-bottom: 30px
+         +xs
+            margin-bottom: 15px
       &-title
          display: flex
          align-items: center
-         margin-bottom: 15px
+         max-width: 220px
+         min-height: 43px
          +f('pm-600', 20, 20)
+         +xs
+            min-height: 0
+            font-size: 18px
+         
          svg
+            flex-shrink: 0
             margin-right: 14px
+            +xs
+               margin-right: 10px
+               width: 28px
+               height: 28px
             
-      a
-         &:not(:last-child)
-            margin-bottom: 7px
+      &-links
+         display: flex
+         flex-direction: column
+         max-width: 255px
+         margin-top: 13px
+         +sm
+            max-width: none
+         +xs
+            margin-top: 2px
+            padding-left: 38px
+         a
+            &:not(:last-child)
+               margin-bottom: 7px
 // end services //
             
 // begin about //
@@ -187,6 +362,9 @@
    &__container
       display: flex
       align-items: center
+      +sm
+         flex-direction: column
+         
       
    &__content
       display: flex
@@ -195,55 +373,100 @@
    &__row
       display: flex
       margin: 0 -15px
+      +sm
+         flex-direction: column
+         
    &__info
-      padding-right: 30px
+      padding: 80px 40px 70px 0
+      +sm
+         padding: 60px 0 70px
+      +xs
+         padding: 30px 0
       &-row
          display: flex
          margin: 0 -20px 25px
+         +sm
+            margin: 0 -15px 25px
+         +xs
+            display: none
 
       &-title
-         margin-bottom: 30px
+         margin-bottom: 40px
          text-align: left
+         transform: translateX(-50px)
+         opacity: 0
+         +xs
+            +f('pm-700')
+            text-transform: uppercase
+            font-size: 17px
+            line-height: 22px
+            margin-bottom: 10px
          
       &-descr
          margin-bottom: 20px
-      p
-         &:not(:last-child)
-            margin-bottom: 20px
+         > p
+            transform: translateX(-50px)
+            opacity: 0
+            &:not(:first-child)
+               +xs
+                  display: none
+            &:not(:last-child)
+               margin-bottom: 15px
             
       &-btn
          min-width: 190px
+         transform: translateX(-50px)
+         opacity: 0
    
    &__item
-      flex: 0 0 25%
+      flex: 0 1 25%
       padding: 0 20px
       text-align: center
+      +sm
+         padding: 0 15px
       &-count
-         margin-bottom: 10px
+         margin-bottom: 20px
          +f('pm-700', 30, 30)
          color: #dc3531
+         transform: translateY(20px)
+         opacity: 0
          
       &-text
          max-width: 125px
          margin: 0 auto
          +f('pm-400', 16, 20)
-         
+         transform: translateY(-20px)
+         opacity: 0
          
    &__events
+      position: relative
       flex: 0 0 350px
-      padding: 35px 28px
-      margin: -30px 0
-      background-color: #dc3531
+      max-width: 350px
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 0 43px 0 28px
       color: #fff
+      +sm
+         flex: 0 1 auto
+         max-width: none
+         padding: 0
+      +xs
+         display: none
+         
       &-title
-         margin-bottom: 10px
+         margin-bottom: 20px
          text-align: left
+         transform: translateY(50px)
+         opacity: 0
          
       &-item
+         transform: translateY(50px)
+         opacity: 0
          &:not(:last-child)
             margin-bottom: 20px
          &-date
-            margin-bottom: 5px
             +f('pm-700')
          
       &-decor-link
@@ -254,20 +477,54 @@
          .no-touch &:hover span
             border-bottom-color: #fff
             
+      &-inner
+         position: relative
+         z-index: 1
+      &-mask
+         transform: translateY(100px)
+         opacity: 0
+         position: absolute
+         top: -30px
+         left: 0
+         right: 0
+         bottom: -36px
+         background-color: #dc3531
+         +trs
+         +sm
+            left: -15px
+            right: -15px
+         
    &__video
-      padding: 60px 0
+      position: relative
+      padding: 90px 0
       background: #fff
+      +sm
+         padding: 80px 0 20px
+      +xs
+         display: none
+      .container
+         position: relative
+         z-index: 2
       &-col
          flex: 0 1 50%
          padding: 0 15px
-         
+         &:nth-child(1)
+            transform: translateX(-70px)
+            opacity: 0
+         &:nth-child(2)
+            transform: translateX(70px)
+            opacity: 0
+            +sm
+               margin-bottom: 30px
+               text-align: center
+            
          iframe
-            width: 100%
+            width: 540px
             height: 303px
          
          p
             &:not(:last-child)
-               margin-bottom: 20px
+               margin-bottom: 13px
                
             i
                +f('pm-300i')
@@ -279,6 +536,8 @@
    position: relative
    display: flex
    flex-wrap: wrap
+   +sm
+      display: none
    .no-touch &:hover .clients__title
       opacity: 0
       pointer-events: none
@@ -299,7 +558,7 @@
       align-items: center
       justify-content: center
       flex-direction: column
-      flex: 0 0 calc(100% / 8)
+      flex: 1 1 12.5%
       height: 100px
       min-width: 200px
       text-align: center
@@ -323,10 +582,18 @@
 
 // begin testimonials //
 .testimonials
-   padding: 70px 0
-   
+   padding: 117px 0 100px
+   +sm
+      padding: 30px 0 50px
+   +xs
+      display: none
    &__inner
       display: none
+      +md
+         max-width: 870px
+         margin: 0 auto
+      +sm
+         max-width: 630px
       &.slick-initialized
          display: block
    
@@ -350,3 +617,12 @@
          content: ''
 
 // end testimonials //
+
+// begin contact-map //
+.contact-map
+   height: 426px
+   +xs
+      height: 215px
+      border-top: 3px solid #fff
+   
+// end contact-map //
