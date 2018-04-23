@@ -95,7 +95,7 @@ class Slider {
       speed: 800,
       autoplay: true,
       fade: true,
-      autoplaySpeed: 2500,
+      autoplaySpeed: 3000,
       responsive: [{
         breakpoint: 767,
         settings: {
